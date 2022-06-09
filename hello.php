@@ -7,7 +7,7 @@
 >>>>>>> Hello two
     </head>
     <body>
-        <?php echo '<h1>Hello StayPrivate;)</h1>'; ?>
+        <?php echo '<h1>Hello form StayPrivateTest!)</h1>'; ?>
         <?php phpinfo(); ?>
     </body>
 <<<<<<< HEAD
