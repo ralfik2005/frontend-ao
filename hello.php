@@ -8,7 +8,7 @@
     </head>
     <body>
         <?php echo '<h1>Hello form Stay Private 
-        Test World;)</h1>'; ?>
+        Test ;)</h1>'; ?>
         <?php phpinfo(); ?>
     </body>
 <<<<<<< HEAD
