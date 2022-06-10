@@ -3,8 +3,8 @@
         <title>PHP Hello World!</title>
     </head>
     <body>
-        <?php echo '<h1>Hello form Stay Private 
-        Test World;)</h1>'; ?>
+        <?php echo '<h2>Hello form Stay Private 
+        Test World!</h2>'; ?>
         <?php phpinfo(); ?>
     </body>
 </html>
