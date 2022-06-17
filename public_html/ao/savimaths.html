@@ -1,0 +1,245 @@
+<html>
+	<head>
+		<title>Savi Maths</title>
+		<link rel="stylesheet" href="css/bootstrap.css">	
+		<script src="js/app/lib/jquery.min.js"></script>		
+		<script src="js/vendor/bootstrap.js"/> 				
+	</head>
+	<body>
+		<h1 id="theTitle"></h1>
+		<h3 id="time"></h3>
+		<h2 id="question">4+3</h2>
+		<input id="answer" type="input" maxlength="4" size="4" style="font-size:20; margin-right:20px"></input>	
+		<button id="check" style="height:30px">Check</button>
+		<h2 id="score">Score: 0/0</h2>
+
+		<div class="progress" style="width:45%">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0" style="width: 0%;">
+		  </div>
+		</div>
+
+		<h3 id="oops"></h3>		
+		<button id="tryAgain" style="height:30px; display:none">Try Again</button>
+
+		<!-- Modal -->
+		<div id="mainModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog" style="z-index:1041">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Welcome to Savi's Maths Challenge</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class="input-group input-group-sm">
+				  <span class="input-group-addon" id="sizing-addon3">Enter Your Name</span>
+				  <input id="username" type="text" class="form-control" placeholder="Enter your name" aria-describedby="sizing-addon3" value="Savi">
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optNegative" value="noNegative" checked="checked">No Negative Answers</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optNegative" value="allowNegative">Allow Negative Answers</label>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Start Challenge</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+		
+		<script>
+			var introText 	= "Hello and welcome to your maths challenge ",
+				timeText 	= "Time remaining: ",
+				scoreText 	= "Score: "
+				oopsText 	= "Sorry, :( answer was ",
+				DURATION 	= 120,
+				score 		= 0,
+				numberOfQuestions = 0,
+				duration    = DURATION,
+				currentAnswer = -1,
+				timesUpTextBad 	= "!!Times Up - You need more sleep, you can do much better!!";
+				timesUpTextL1 	= "!!Times Up - Improving, but you can do better!!";
+				timesUpTextL2 	= "!!Times Up - Almost there, keeping trying!!";
+				timesUpTextL3 	= "!!Times Up - Very cool, you're almost a maths genius, try again!!";
+				timesUpTextGood = "!!Times Up - Awesome - You rock like a blobfish!!",
+				allowNegativeSums = true;
+
+			var introLabel 		= $("#theTitle")
+				timeLabel 		= $("#time"),
+				questionText 	= $("#question"),
+				answerInput		= $("#answer"),
+				checkButton 	= $("#check"),
+				scoreLabel 		= $("#score"),
+				oopsLabel 		= $("#oops"),
+				titleLabel		= $("#theTitle");
+				tryAgainButton	= $("#tryAgain");
+				progressBar 	= $(".progress-bar");
+				progress 		= $(".progress");
+
+			$("body").css("padding", "40px").css("padding-top", "5px");
+
+			var numbersToSelectFrom = [3, 4, 5, 6, 7, 8, 9];
+
+			var startMathsChallenge = function() {
+				$('#mainModal').on('hide.bs.modal', function (e) {
+					introLabel.html(introText + $("#username").val());
+					duration = DURATION;
+					score = 0;
+					numberOfQuestions = 0;
+
+					timeLabel.css("color", "black");
+					timeLabel.html(timeText + duration + "s");
+					scoreLabel.html(scoreText + score + " / " + numberOfQuestions);
+
+					checkButton.show();
+					timeLabel.show();
+					questionText.show();
+					answerInput.show();
+
+					if ($('input[name=optNegative]:checked').val() == "allowNegative") {
+						allowNegativeSums = true;
+					} else {
+						allowNegativeSums = false;
+					};
+
+					progressBar.attr('aria-valuemax', duration).attr('aria-valuenow', duration).css('width', (100*duration)/DURATION + "%");
+					progress.show();
+
+					tryAgainButton.hide();
+
+					answerInput.focus();
+					createSum();
+					startTimer();				
+				}).modal('show');				
+			}
+
+			var startTimer = function() {
+				timerId = setInterval(function() {
+					duration = duration - 1;
+					timeLabel.html(timeText + duration + "s");
+					progressBar.attr('aria-valuenow', duration).css('width',(100*duration)/DURATION + "%");
+					if (duration == 0) {					
+						checkButton.hide();
+						if (score < 20) {
+							titleLabel.html(timesUpTextBad);
+						} else if (score < 30) {
+							titleLabel.html(timesUpTextL1);
+						} else if (score < 40) {
+							titleLabel.html(timesUpTextL2);
+						} else if (score < 48) {											
+							titleLabel.html(timesUpTextL3);
+						} else {
+							titleLabel.html(timesUpTextGood);						
+						}					
+						timeLabel.hide();
+						questionText.hide();
+						answerInput.hide();
+						clearInterval(timerId);
+						tryAgainButton.show();
+						progress.hide();
+					}
+					if (duration < 6) {
+						timeLabel.css("color", "red");
+					} else if (duration < 16) {
+						timeLabel.css("color", "blue");
+					}
+				}, 1000); 
+			}
+
+			checkButton.click(function() {
+				numberOfQuestions++;					
+				if (answerInput.val() == "" + currentAnswer) {
+					score++;
+				} else {
+					oopsLabel.html(oopsText + currentAnswer);
+					oopsLabel.show();
+					setTimeout(function() {
+						oopsLabel.hide();
+					}, 2000);					
+				}
+				scoreLabel.html(scoreText + score + " / " + numberOfQuestions);				
+				answerInput.val("");				
+				createSum();
+			});
+
+			tryAgainButton.click(function() {
+				//location.reload();
+				startMathsChallenge();
+			});
+
+			var getNumber = function() {
+				var index 		= Math.floor((Math.random() * 6) + 0),
+					addFactor 	= Math.floor((Math.random() * 3) + 1);
+				if (addFactor == 2) {
+					addFactor = 10;
+				} else if (addFactor == 3) {
+					addFactor = 20;
+				} else {
+					addFactor = 0;
+				}
+				return numbersToSelectFrom[ index ] + addFactor;
+			}
+
+			var doAddition = function() {
+				var type = Math.floor((Math.random() * 2) + 1);
+				return type == 2 ? true : false;
+			}		
+
+			var createSum = function() {
+				var firstNumber		= getNumber(),
+					isAddition 		= doAddition(),
+					secondNumber 	= getNumber(),
+					symbol 			= "+";
+
+				var isGoodAddition = function(x) {
+					return x == 10 ? false : true;
+				}
+
+				var isGoodSubtraction = function(x) {
+					var response = true;
+					if (!allowNegativeSums && x < 0) {
+						response = false;
+					} else {
+						response = x == 0 ? false : true;
+					}
+					return response;
+				}				
+
+				if (isAddition) {
+					currentAnswer = firstNumber + secondNumber;
+					while (!isGoodAddition(currentAnswer)) {
+						firstNumber 	= getNumber();
+						secondNumber 	= getNumber();
+						currentAnswer 	= firstNumber + secondNumber;					
+					}
+				} else {
+					currentAnswer = firstNumber - secondNumber;
+					symbol 		  = "-"
+					while (!isGoodSubtraction(currentAnswer)) {
+						firstNumber 	= getNumber();
+						secondNumber 	= getNumber();
+						currentAnswer 	= firstNumber - secondNumber;					
+					}
+				}
+
+				questionText.html(firstNumber + " " + symbol + " " + secondNumber);
+			}
+
+			answerInput.keypress(function(event){
+
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if(keycode == '13'){
+					if (duration > 0) {
+						checkButton.click();
+					}
+				}
+				event.stopPropagation();
+			});
+
+			startMathsChallenge();
+		</script>		
+	</body>	
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ao-logged-out"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ao-logged-out"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ao-logged-out"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js ao-logged-out">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible">
+  <title>SP Jitsi Test</title>
+  <meta content="" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=1005595620, app-argument=myURL">
+  <!--meta name="viewport" content="width=device-width"-->
+  
+  <link href="/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+  <link href="/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png">
+  <link href="/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+  <link href="/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <meta content="#da532c" name="msapplication-TileColor">
+  <meta content="/mstile-144x144.png" name="msapplication-TileImage">
+
+  <!--link rel="stylesheet" href="css/css/vendor.css">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="css/ao.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css/elephant.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css/application.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css/ao.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/css/font-awesome.css" rel="stylesheet"-->
+</head>
+
+<body class="layout layout-header-fixed layout-sidebar-fixed not-accounts search-on">
+  
+  <!--div class="refresh"></div-->
+
+  <!--div class="ao-login" id="ao-login">
+    <div class="ao-login-logo" id="ao-login-logo"></div>
+    <div class="ao-login-form" id="ao-login-form">
+      <div class="ao-login-instructions"></div><input autocomplete="off" class="ao-login-username" id="username" placeholder="Username" spellcheck="false" type="text"> <input autocomplete="off" class="ao-login-ident" id="company-ident" placeholder="Unique Company ID" spellcheck="false" type="text"> <input autocomplete="off" class="ao-login-password" id="password" placeholder="Password" spellcheck="false" type="password">
+      <div class="ao-login-btn-container" id="ao-login-btn-container">
+        <button class="btn ao-login-btn" id="ao-login-btn" type="button">Sign In</button>
+      </div><a href="#" id="ao-forgot-pwd">Forgotten password?</a>
+      <div class="ao-form-errors"></div>
+      <div class="ao-register"></div>
+    </div>
+    <div class="ao-login-form" id="ao-login-pwd-reset-request">
+      <p id="ao-login-pwd-reset-request-text">Request password reset</p><input autocomplete="off" class="ao-login-username" id="username-reset-request" placeholder="Username" spellcheck="false" type="text"> <input autocomplete="off" class="ao-login-ident" id="email-address-reset-request" placeholder="Email Address" spellcheck="false" type="text"> <input autocomplete="off" class="ao-login-password" id="company-id-reset-request" placeholder="Company Ident" spellcheck="false" type="text">
+      <div class="ao-login-btn-container">
+        <button class="btn ao-login-btn" id="ao-gen-user-pwd-reset-back" type="button">Cancel</button> <button class="btn ao-login-btn" id="ao-gen-user-pwd-reset" type="button">Send</button>
+      </div>
+      <div class="ao-form-errors"></div>
+    </div>
+    <div class="ao-login-form" id="ao-login-pwd-reset">
+      <p id="ao-login-pwd-text">Reset your password</p><input autocomplete="off" class="ao-login-username" id="username-reset" placeholder="Username" spellcheck="false" type="text"> <input autocomplete="off" class="ao-login-ident" id="pwd1-reset" placeholder="Password" spellcheck="false" type="password"> <input autocomplete="off" class="ao-login-ident" id="pwd2-reset" placeholder="Confirm Password" spellcheck="false" type="password"> <input autocomplete="off" class="ao-login-password" id="company-id-reset" placeholder="Company Ident" spellcheck="false" type="text">
+      <div class="ao-login-btn-container">
+        <button class="btn ao-login-btn" id="ao-user-pwd-reset-back" type="button">Cancel</button> <button class="btn ao-login-btn" id="ao-user-pwd-reset" type="button">Reset</button>
+      </div>
+      <div class="ao-form-errors"></div>
+    </div>
+  </div-->  
+
+  <!--div class="layout-header">
+
+    <div class="navbar navbar-default"></div>
+
+    <div class="layout-content-header"></div>
+
+    <div>
+      <div class="layout-sidebar">
+        <div class="layout-sidebar-backdrop"></div>
+        <div class="layout-sidebar-body">
+          <nav id="sidenavMain" class="sidenav-collapse">
+
+          </nav>
+        </div>
+        <div class="layout-sidebar-body ao_div_align_bottom">
+          <nav id="sidenavNew" class="sidenav-collapse collapse">
+
+          </nav>
+        </div>
+      </div>
+
+      <div class="layout-sidebar second-navbar">
+        <div class="layout-sidebar-backdrop"></div>
+        <div class="layout-sidebar-body">
+          <nav id="sidenavSecond" class="sidenav">
+
+          </nav>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="layout-main">
+
+    <div class="layout-content">
+      <div class="layout-content-body">
+
+
+          <div class="ao-logged-out ao-middle">
+
+            <div id="ao-drag-drop">
+              <div class="drag-helper" style="top:-40px"></div>
+              <div class="blocker"></div>
+            </div>            
+
+            <div id="mainStage">      
+              
+              <div class="main-content" id="main-content-dash">
+                <div class="ao-dashboard-nav-container" id="ao-dashboard-nav-container"></div>
+                <div class="ao-dashboard-list-container" id="ao-dashboard-list-container">
+                  <div id="ao-dashboard-pagination-bar" class="row ao-customer-color ao-pagination">
+                    <div class="col-lg-4 col-1">
+                      <a class="ao-customer-color ao-dashboard-back" href="#" id="ao-dashboard-back" style="text-decoration:none; display:none"><i class="ao-font-icon ao-font-icon-dashprev"></i> <span id="ao-dashboard-back-label">&nbsp;Groups Listing&nbsp;</span></a> <button class="btn btn-default btn-clear ao-btn-small-enabled ao-dashboard-refresh" id="ao-dashboard-refresh" style="outline-width:0"><i class="ao-font-icon ao-font-icon-refresh"></i></button>
+                    </div>
+                    <div class="col-lg-4 col-2 ao-color-grey" id="ao-dashboard-index">
+                      <span id="ao-dashboard-index-label">1-50 of 300&nbsp;</span> <button class="btn btn-default btn-clear ao-btn-small-disabled ao-customer-color-disabled" id="ao-dashboard-left" style="outline-width:0"><span class="ao-font-icon ao-font-icon-dashprev"></span></button> &nbsp; <button class="btn btn-default btn-clear ao-btn-small-disabled" id="ao-dashboard-right" style="outline-width:0"><span class="ao-font-icon ao-font-icon-dashnext"></span></button>
+                    </div>
+                  </div>
+                  <div id="ao-dashboard-list-and-sub-container">
+                    <table cellspacing='0' id="ao-dashboard-list"></table>
+                    <div class="ao-dashboard-sub-container" id="ao-dashboard-sub-container"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ao-comms-container" id="ao-comms-container">
+                <div class="ao-comms-individual-container" id="ao-comms-individual-container"></div>
+                <div id="ao-presence-container" style="display: none;">
+                  <div class="dropup ao-customer-color" style="position:absolute; bottom:60px">
+                    <button class="btn btn-default btn-presence" data-toggle="dropdown" style="outline-width:0"><span class="presence-txt" id="presence-txt">Presence &nbsp;</span><span class="caret"></span></button>
+                    <ul class="dropdown-menu presence-menu" id="ao-presence-list"></ul>
+                  </div>
+                </div>
+                <div class="ao-test-container" id="ao-test-container"></div>
+              </div>
+
+              <div class="resetPwdOnlyEmail" id="resetPwdOnlyEmail" style="display:none"></div>
+
+            </div>
+
+            <div class="ao-foot" id="ao-foot" style="display: none;">
+              <div id="ao-commsfooter">
+                <div class="ao-rec-msg-footer" id="ao-rec-msg-footer"></div>
+                <div class="ao-make-call-footer" id="ao-make-call-footer"></div>
+                <div class="ao-jam-footer" id="ao-jam-footer"></div>
+                <div class="ao-vault-footer" id="ao-vault-footer"></div>
+              </div>
+              <div class="ao-testfooter" id="ao-testfooter"></div>
+            </div>​
+
+          </div>
+
+      </div>
+    </div>
+  </div-->
+
+
+  <!--script src="resources/js/libs/modernizr.min.js"></script--> 
+   
+
+  <script src="js/vendor.js"></script>
+
+  <!--script src="js/ao.js"></script> 
+
+  <script src="js/app/lib/jquery-ui-1.11.0.js"></script> 
+  <script src="resources/js/libs/jquery.ui.touch-punch.min.js"></script>
+   
+  <script src="js/app/lib/jquery.easing.1.3.js"></script> 
+  <script src="resources/js/utils/jquery.cookie.js"></script> 
+  <script src="resources/js/utils/mousetrap.min.js"></script> 
+   
+  <script src="js/app/lib/pubnub.js"></script> 
+  <script src="js/app/lib/hashtag.js"></script> 
+  <script src="js/plugins.js"></script> 
+  
+  <script src="js/main.js"></script> 
+  <script src="js/app/constants/constants.js"></script> 
+  <script src="js/app/globals/globals.js"></script> 
+  <script src="js/app/lib/jquery-radiobutton.js"></script> 
+  <script src="js/app/lib/blockUI.js"></script> 
+   
+  <script src="js/app/lib/moment.js"></script> 
+  <script src="resources/js/utils/jquery.switchButton.js"></script> 
+  <script src="resources/js/libs/underscore.min.js"></script> 
+   
+  <script src="resources/js/libs/backbone.js"></script> 
+  <script src="resources/js/utils/autolinker.js"></script> 
+
+  <script src="js/app/lib/screenfull.min.js"></script> 
+  <script src="resources/js/libs/gsap/plugins/CSSPlugin.min.js"></script> 
+  <script src="resources/js/libs/gsap/easing/EasePack.min.js"></script> 
+  <script src="resources/js/libs/gsap/TweenLite.min.js"></script> 
+
+  <script src="js/app/utils/extensions.js"></script> 
+  <script src="js/app/utils/config.js"></script> 
+  <script src="js/app/utils/utils.js"></script> 
+  <script src="js/app/utils/navButtonUtils.js"></script> 
+  <script src="js/app/utils/toggleButtonUtils.js"></script> 
+  <script src="js/app/utils/dashViewStatus.js"></script> 
+  <script src="js/app/utils/nativeIn.js"></script> 
+  <script src="js/app/utils/appSettings.js"></script> 
+  <script src="js/app/utils/androidFile.js"></script> 
+  
+  <script src="js/app/lib/bowser.min.js"></script> 
+  <script src="js/app/mobile/mobmain.js"></script> 
+
+  <script src="js/app/constants/labels.js"></script> 
+
+  <script src="js/app/controllers/labelController.js"></script> 
+  <script src="js/app/controllers/appController.js"></script> 
+  <script src="js/app/controllers/dataController.js"></script> 
+  <script src="js/app/controllers/dashController.js"></script> 
+  <script src="js/app/controllers/relationshipController.js"></script> 
+  <script src="js/app/controllers/userController.js"></script> 
+  <script src="js/app/controllers/pubnubController.js"></script> 
+  <script src="js/app/controllers/pubnubSessionController.js"></script> 
+  <script src="js/app/controllers/joinMeetingController.js"></script> 
+  <script src="js/app/controllers/soundController.js"></script> 
+  <script src="js/app/controllers/incomingController.js"></script> 
+  <script src="js/app/controllers/sendFileController.js"></script> 
+  <script src="js/app/controllers/vaultController.js"></script> 
+  <script src="js/app/controllers/diaryController.js"></script> 
+  <script src="js/app/controllers/sendMsgController.js"></script> 
+  <script src="js/app/controllers/textChatController.js"></script> 
+  <script src="js/app/controllers/recordMsgController.js"></script> 
+  <script src="js/app/controllers/dashAccManagerController.js"></script> 
+  <script src="js/app/controllers/dashPromotionController.js"></script> 
+  <script src="js/app/controllers/notesController.js"></script> 
+  <script src="js/app/controllers/themeController.js"></script> 
+  <script src="js/app/controllers/controllerController.js"></script> 
+  <script src="js/app/controllers/vendorController.js"></script> 
+  <script src="js/app/controllers/postdashSetupController.js"></script> 
+  <script src="js/app/controllers/importController.js"></script> 
+  <script src="js/app/controllers/activeMeetingController.js"></script>
+  <script src="js/app/controllers/browseHistoryController.js"></script>
+
+  <script src="js/app/views/notificationDetail.js"></script> 
+
+  <script src="js/app/controllers/audioVideoSettingsController.js"></script> 
+  <script src="js/app/controllers/shortcutController.js"></script> 
+  <script src="js/app/controllers/loginController.js"></script> 
+  <script src="js/app/controllers/modalController.js"></script> 
+  <script src="js/app/controllers/videoPlayController.js"></script> 
+
+  <script src="js/dev/conf.js"></script> 
+
+  <script src="js/app/models/collections.js"></script> 
+  <script src="js/app/models/datamapping.js"></script> 
+  <script src="js/app/models/dashboardRelEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationCallEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationMsgEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationFileEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationTextChatEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationAccManEntry.js"></script> 
+  <script src="js/app/models/dashboardNotificationRecEntry.js"></script> 
+  <script src="js/app/models/callCredentialsAndDetails.js"></script> 
+  <script src="js/app/models/user/adlScopeUser.js"></script> 
+  <script src="js/app/models/user/relationshipCollection.js"></script> 
+  <script src="js/app/models/user/relationships.js"></script> 
+  <script src="js/app/models/user/relationshipType.js"></script> 
+  <script src="js/app/models/user/user.js"></script> 
+  
+  <script src="js/app/utils/templates.js"></script> 
+   
+  <script src="js/app/lib/colorpicker.js"></script--> 
+  
+  <script src="js/app/utils/atl_video.js"></script> 
+
+  <!--script src="js/models/models.js"></script--> 
+  <script src="js/js/tpls/ao.tpls.js"></script> 
+  <!--script src="js/filter-and-sort-dropdowns.js"></script>
+  <script src="js/aoDiary.js"></script> 
+  <script src="js/aoAccounts.js"></script> 
+  <script src="js/aoVendor.js"></script>
+  <script src="js/aoTheme.js"></script>
+  <script src="js/aoCall.js"></script>
+  <script src="js/aoRecording.js"></script>
+  <script src="js/aoVault.js"></script>
+  <script src="js/mail.js"></script> 
+  <script src="js/compose.js"></script> 
+  <script src="js/messenger.js"></script> 
+  <script src="js/call-indicator.js"></script> 
+  <script src="js/aoApp.js"></script> 
+  <script src="js/aoModelController.js"></script> 
+  <script src="js/contactsSearch.js"></script>
+  <script src="js/application.js"></script--> 
+   
+  <!--script type="text/javascript" src="js/preload/companyPreload.php"></script-->
+
+  <!--div class="dialog_confirm_zindex" id="dialog-confirm" title="">
+    <p id="dialog-confirm-text"></p>
+  </div>
+
+  <div id="ao-temp-store" style="display:none"></div>
+
+  <div class="ao-teleport-welcome-page" id="ao-teleport-welcome-page">
+    <div class="ao-teleport-welcome-contents" id="ao-teleport-welcome-contents">
+      <h3 id="ao-teleport-welcome-text">Welcome! Please choose where you would like to go first:</h3><input class="btn btn-default" id="teleportGoToRelationship" type="button" value="Go directly to the communications group"><br>
+      <input class="btn btn-default" id="teleportGoToDash" type="button" value="Go to my dashboard to see all recent activity">
+    </div>
+  </div>
+
+  <div aria-hidden="true" aria-labelledby="defaultModalLabel" class="modal fade in" data-backdrop="static" id="defaultModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button aria-hidden="true" class="close" data-dismiss="modal" id="defaultModalXClose" type="button">&times;</button>
+          <h4 class="modal-title" id="defaultModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body" id="defaultModalBody">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-default" data-dismiss="modal" id="defaultModalClose" type="button">Close</button> <button class="btn btn-primary" id="defaultModalOk" type="button">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div aria-hidden="true" aria-labelledby="miniModalLabel" class="modal fade in" id="block" role="dialog" tabindex="-1"></div>
+  
+  <div aria-hidden="true" aria-labelledby="miniModalLabel" class="modal fade in" id="miniModal" role="dialog" tabindex="-1"></div>
+  
+  <div class="alert alert-success" style="display: none;">
+    <button aria-hidden="true" class="close" style="margin-top: -2px;" type="button">×</button>
+  </div>
+  
+  <div class="alert alert-info" style="display: none;">
+    <button aria-hidden="true" class="close" style="margin-top: -2px;" type="button">×</button>
+  </div>
+  
+  <div class="alert alert-warning" style="display: none;">
+    <button aria-hidden="true" class="close" style="margin-top: -2px;" type="button">×</button>
+  </div>
+  
+  <div class="alert alert-danger" style="display: none;">
+    <button aria-hidden="true" class="close" style="margin-top: -2px;" type="button">×</button>
+  </div>
+  
+  <div class="alert alert-loading" style="display:none;">
+    <div class="general-loader7" style="float:right; position: relative; top: -5px;"></div><button aria-hidden="true" class="close" style="display:none" type="button">×</button>
+  </div>
+  
+  <div class="videoContainerPlayer" id="videoContainerPlayer"></div>
+  
+  <div id="ao_strip" style="display:none"></div>
+  
+  <div id="logo-alpha"></div-->
+
+  <script type="text/javascript">
+    setTimeout(function() {
+      if (!window.AO) {
+        AO = {};
+      }
+      $("#ao-login").hide();    
+      //$(".layout-main").hide();
+      hintsController = function() {};
+      hintsController.stopAllTours = function() {};
+
+      //var atlJS = document.createElement('script');
+
+      //atlJS.setAttribute('src','https://atlassian.video/external_api.js');
+
+      //document.head.appendChild(atlJS);
+
+      var template  = Handlebars.templates['atl_header'],
+          html      = template({});
+      $("head").append(html);      
+
+      template  = Handlebars.templates['atl_body'],
+      html      = template({});            
+      $("body").append(html);
+
+      var atlCSS = document.createElement('style');
+      atlCSS.setAttribute('type', 'text/css');
+
+      template  = Handlebars.templates['atl_css'],
+      html      = template({});            
+      atlCSS.innerText = html;
+      document.head.appendChild(atlCSS);            
+
+      AO.atlVideo = new AtlVideoClass();                        
+      AO.atlVideo.init();
+    }, 2000);
+  </script>
+</body>
+</html>

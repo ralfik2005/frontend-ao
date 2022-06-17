@@ -1,0 +1,105 @@
+<IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+</IfModule>
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^server\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^(.+)\.stayprivatetest\.com [NC]
+RewriteCond %{REQUEST_URI} !^/ao/
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteCond %{REQUEST_URI} !^/invite/
+RewriteCond %{REQUEST_URI} !^/access/
+RewriteCond %{REQUEST_URI} !^/teleport.html(.*)
+RewriteCond %{REQUEST_URI} !^/pwdreset.html(.*)
+RewriteCond %{REQUEST_URI} !^/openMobileApp [NC]
+RewriteCond %{REQUEST_URI} !^/openiOSApp [NC]
+RewriteCond %{REQUEST_URI} !^/openiOSNativeApp [NC]
+RewriteCond %{REQUEST_URI} !^/openAndroidApp [NC]
+RewriteCond %{REQUEST_URI} !^/openAndroidNativeApp [NC]
+RewriteCond %{REQUEST_URI} !^/launchAOApp [NC]
+RewriteCond %{REQUEST_URI} !^/launchAOAppNative [NC]
+RewriteCond %{REQUEST_URI} !^/launchCFApp [NC]
+RewriteCond %{REQUEST_URI} !^/launchCFAppNative [NC]
+RewriteCond %{REQUEST_URI} !^/launchPLApp [NC]
+RewriteCond %{REQUEST_URI} !^/launchPLAppNative [NC]
+RewriteCond %{REQUEST_URI} !^/launchAOAppKindle [NC]
+RewriteCond %{REQUEST_URI} !^/launchCFAppKindle [NC]
+RewriteCond %{REQUEST_URI} !^/launchPLAppKindle [NC]
+RewriteRule ^(.*)$ ao%{REQUEST_URI} [L,QSA]
+RewriteCond %{HTTP_HOST} !^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^server\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^(.+)\.stayprivatetest\.com [NC]
+RewriteCond %{REQUEST_URI} ^/teleport.html(.*)
+RewriteRule ^/?teleport.html(.*)$ ao/teleport.php$1 [L] 
+RewriteCond %{HTTP_HOST} !^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^server\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^(.+)\.stayprivatetest\.com [NC]
+RewriteCond %{REQUEST_URI} ^/pwdreset.html(.*)
+RewriteRule ^/?pwdreset.html(.*)$ ao/pwdreset.php$1 [L] 
+RewriteCond %{HTTP_HOST} !^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^server\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^(.+)\.stayprivatetest\.com [NC]
+RewriteCond %{REQUEST_URI} ^/invite/(.*)
+RewriteRule ^/?invite/(.*)$ ao?invite=$1 [L]
+RewriteCond %{HTTP_HOST} !^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^server\.stayprivatetest\.com$ [NC]
+RewriteCond %{HTTP_HOST} ^(.+)\.stayprivatetest\.com [NC]
+RewriteCond %{REQUEST_URI} ^/access/(.*)
+RewriteRule ^/?access/(.*)$ ao?invite=$1 [L] 
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/api/(.*)
+RewriteRule ^(.*)$ ao_ws%{REQUEST_URI} [L,QSA] 
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchAOApp//os=kindle(.*)
+RewriteRule ^/?launchAOApp//os=kindle(.*)$ ao/staging/app/aon.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchAOApp(.*)
+RewriteRule ^/?launchAOApp(.*)$ https://alwaysorg.com/ao/apps.html [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchAOAppNative(.*)
+RewriteRule ^/?launchAOAppNative(.*)$ ao/staging/app/aon.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchCFApp//os=kindle(.*)
+RewriteRule ^/?launchCFApp//os=kindle(.*)$ ao/staging/app/cf.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchCFApp(.*)
+RewriteRule ^/?launchCFApp(.*)$ ao/staging/app/cf.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchCFAppNative(.*)
+RewriteRule ^/?launchCFAppNative(.*)$ ao/staging/app/aon.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchPLApp//os=kindle(.*)
+RewriteRule ^/?launchPLApp//os=kindle(.*)$ ao/staging/app/su.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchPLApp(.*)
+RewriteRule ^/?launchPLApp(.*)$ ao/staging/app/su.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchPLAppNative(.*)
+RewriteRule ^/?launchPLAppNative(.*)$ ao/staging/app/aon.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchAOAppKindle(.*)
+RewriteRule ^/?launchAOAppKindle(.*)$ ao/staging/app/aopd.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchCFAppKindle(.*)
+RewriteRule ^/?launchCFAppKindle(.*)$ ao/staging/app/aopd.apk [L]
+RewriteCond %{HTTP_HOST} ^www\.stayprivatetest\.com$ [NC]
+RewriteCond %{REQUEST_URI} ^/launchPLAppKindle(.*)
+RewriteRule ^/?launchPLAppKindle(.*)$ ao/staging/app/aopd.apk [L]
+</IfModule>
+<IfModule mod_alias.c>
+RedirectMatch /openMobileApp/Promo/(.*) AON://Promo=$1
+RedirectMatch /openiOSApp/Promo/(.*) aoiospgapdev://Promo=$1
+RedirectMatch /openiOSNativeApp/Promo/(.*) aoiosnativedev://Promo=$1
+RedirectMatch /openAndroidApp/Promo/(.*) aon://Promo=$1
+RedirectMatch /openAndroidNativeApp/Promo/(.*) aoandnative://Promo=$1
+</IfModule>
+<IfModule mod_deflate.c>
+<filesMatch "\.(js|css)$">
+SetOutputFilter DEFLATE
+</filesMatch>
+</IfModule>

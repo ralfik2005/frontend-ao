@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">        
+        <title>SP Fonts</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/ionicons.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">    
+        <script src="js/jquery.min.js"></script>        
+        <script src="js/bootstrap.js"/></script>
+        <script src="js/fastclick.js"/></script>
+        <script src="js/underscore.js"/></script>  
+    </head>
+    <body>
+
+        <div class="container">
+          <h2>Fonts</h2>
+          <p></p>            
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Font Awesome</td>
+                <td>fontawesome-webfont</td>
+                <td>
+                	<ul class="small">
+						<li>display: inline-block;</li>
+						<li>font: normal normal normal 14px/1 FontAwesome;</li>
+						<li>font-size: inherit;</li>
+						<li>text-rendering: auto;</li>
+						<li>-webkit-font-smoothing: antialiased;</li>
+						<li>-moz-osx-font-smoothing: grayscale;</li>
+					</ul>
+  					 <ul class="small">
+						<li>.fa-lg {
+						<li>font-size: 1.33333333em;</li>
+						<li>line-height: 0.75em;</li>
+						<li>vertical-align: -15%;</li>
+						<li>}</li>
+					</ul>											                	
+                </td>
+              </tr>
+              <tr>
+                <td>Secure Portal</td>
+                <td>StayPrivate-icon-font</td>
+                <td>
+                	<ul class="small">
+						<li>display: inline-block;</li>
+						<li>font-family: FontAwesome;</li>
+						<li>font-size: inherit;</li>
+						<li>font-style: normal;</li>
+						<li>font-weight: normal;</li>
+						<li>line-height: 1;</li>
+						<li>text-align: center;</li>
+						<li>text-rendering: auto;</li>
+						<li>-webkit-font-smoothing: antialiased;</li>
+						<li>-moz-osx-font-smoothing: grayscale;</li>
+  					</ul>
+  					 <ul class="small">
+						<li>.icon-lg {
+						<li>font-size: 1.75em;</li>
+						<li>line-height: 0.75em;</li>
+						<li>vertical-align: -15%;</li>
+						<li>}</li>
+					</ul>	  					
+                </td>
+              </tr>
+              <tr>
+                <td>Ion Icons</td>
+                <td>ionicons</td>
+                <td></td>
+              </tr>              
+              <tr>
+                <td>Switch View</td>
+                <td><button id="start" style="height:30px">Start</button></td>
+                <td></td>
+              </tr>                          
+            </tbody>
+          </table>
+        </div>        
+
+        <p class="test">
+        	Hello World
+        <p>
+
+        <p class="helv test">
+        	Hello World
+        <p>
+
+        <p class="helvB test">
+        	Hello World
+        <p>
+
+        <p class="helvL test">
+        	Hello World
+        <p>                	
+
+        <div id="faContainer" class="container">
+            <h2>Font Awesome</h2>
+            <table id="faTable" class="table">
+
+            </table>
+        </div>
+
+        <div id="spContainer" class="container">
+            <h2>Secure Portal</h2>
+            <table id="spTable" class="table">
+
+            </table>
+        </div>
+
+        <div id="iiContainer" class="container">
+            <h2>Ion Icons</h2>
+            <table id="iiTable" class="table">
+
+            </table>
+        </div>
+
+		<script type="text/javascript" src="js/fontIndex.json"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

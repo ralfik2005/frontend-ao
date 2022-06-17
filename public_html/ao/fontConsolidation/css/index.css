@@ -1,0 +1,192 @@
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/HelveticaNeue.woff?v=4.6.3") format("woff"), url("../fonts/HelveticaNeue.ttf?v=4.6.3") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url("../fonts/HelveticaNeueBold.ttf?v=4.6.3") format("truetype");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url("../fonts/HelveticaNeueLight.ttf?v=4.6.3") format("truetype");
+}
+
+@font-face {
+  font-family: 'StayPrivate';
+  src: url("../fonts/StayPrivate-icon-font.eot?v=0.1");
+  src: url("../fonts/StayPrivate-icon-font.eot?#iefix&v=0.1") format("embedded-opentype"), url("../fonts/StayPrivate-icon-font.woff2?v=0.1") format("woff2"), url("../fonts/StayPrivate-icon-font.woff?v=0.1") format("woff"), url("../fonts/StayPrivate-icon-font.ttf?v=0.1") format("truetype"), url("../fonts/StayPrivate-icon-font.svg?v=0.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'IonIcons';
+  src: url("../fonts/ionicons.eot?v=0.1");
+  src: url("../fonts/ionicons.eot?#iefix&v=0.1") format("embedded-opentype"), url("../fonts/ionicons.woff?v=0.1") format("woff"), url("../fonts/ionicons.ttf?v=0.1") format("truetype"), url("../fonts/ionicons.svg?v=0.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-lg {
+  font-size: 1.7em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.icon-2x {
+    font-size: 2em;
+}
+
+.icon-home:before {
+    font-family: StayPrivate;
+    content: "\ef";
+}
+
+.icon-user-plus:before {
+    font-family: StayPrivate;
+    content: "\74";
+}
+
+.icon-theme-new:before {
+    font-family: StayPrivate;
+    content: "\e7";
+}
+
+.icon-vendor-new:before {
+  font-family: StayPrivate;
+  content: "\F2";
+}
+
+.icon-list-ul:before {
+    font-family: StayPrivate;
+    content: "\3f";
+}
+
+.icon-envelope-o:before {
+    font-family: StayPrivate;
+    content: "\41";
+}
+
+.icon-commenting-o:before {
+    font-family: StayPrivate;
+    content: "\68";
+}
+
+.icon-video-camera:before {
+    font-family: StayPrivate;
+    content: "\23";
+}
+
+.icon-file-o:before {
+    font-family: StayPrivate;
+  content: "\4b";
+}
+
+.icon-calendar:before {
+    font-family: StayPrivate;
+  content: "\76";
+}
+
+.icon-sp-flag:before {
+    font-family: StayPrivate;
+    content: "\6c";
+}
+
+.icon-sp-message:before {
+    font-family: StayPrivate;
+    content: "\68";
+}
+
+.icon-users:before {
+    font-family: StayPrivate;
+    content: "\44";
+}
+.icon-sp-user-add:before {
+  font-family: StayPrivate;
+  content: "\74";
+}
+.icon-sp-user-edit:before {
+  font-family: StayPrivate;
+  content: "\70";
+}
+.icon-sp-user-delete:before {
+  font-family: StayPrivate;
+  content: "\75";
+}
+.icon-sp-group-add:before {
+  font-family: StayPrivate;
+  content: "\72";
+}
+.icon-sp-group-edit:before {
+  font-family: StayPrivate;
+  content: "\44";
+}
+.icon-sp-group-delete:before {
+  font-family: StayPrivate;
+  content: "\71";
+}
+
+
+/*
+//Replaced file - AO-WS: FR
+.icon-repfile
+
+//Change name to - AO-WS: NC
+.icon-fileren
+
+//Changed description of - AO-WS: ND 
+.icon-descupdt
+
+//Moved file to a different folder - AO-WS: FC
+.icon-filemov
+
+//Uploaded the file - AO-WS: U
+.icon-fileup
+
+//Created the folder - AO-WS: F
+.icon-foldcre
+
+//Moved sent file to the Vault - AO-WS: T
+.icon-filemovvault
+
+//Moved sent file to the Vault - AO-WS: C
+.icon-filemovvault
+
+//Default vault action - AO-WS: 
+.icon-sfile
+*/
+
+body {
+    background:#fff;
+    font-family: Arial, Helvetica, Sans-Serif;
+}
+
+p {
+    font-size: 1em;
+}
+
+.small {
+    font-size: 0.75em;
+}
+
+.noBullet {
+    list-style: none; 
+    padding-left: 0px;   
+}
+
+.test {
+    display:none;
+}
+
+.helv {
+    font-family: HelveticaNeue;
+}
+
+.helvB {
+    font-family: HelveticaNeueBold;
+}
+
+.helvL {
+    font-family: HelveticaNeueLight;
+}

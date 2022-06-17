@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">        
+        <title>Always Organised</title>
+        <meta name="description" content="">
+        <!--meta name="viewport" content="width=device-width"-->
+
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">        
+        <link rel="stylesheet" href="css/jquery-ui.css">                
+
+        <link rel="stylesheet" href="css/main.css">        
+        <link rel="stylesheet" href="css/jquery-radiobuttons.css">               
+        <link rel="stylesheet" href="css/ao.css">
+
+        <link href="css/widgets/kendo.common.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/widgets/kendo.default.min.css">   
+		
+
+        <link rel="stylesheet" href="css/animations.css">
+
+        <!--link href="css/widgets/animateModal.min.css" rel="stylesheet"-->
+
+        <link rel="stylesheet" href="css/widgets/ao-radio-filter.css">
+        <link rel="stylesheet" href="css/widgets/ao-search-filter.css">
+        <link rel="stylesheet" href="css/widgets/ao-radio-dash.css">
+        <link rel="stylesheet" href="css/widgets/ao-radio-msg.css">
+        <link rel="stylesheet" href="css/widgets/ao-dashboard-table.css">
+        <link rel="stylesheet" href="css/widgets/mbExtruder.css">
+        <link rel="stylesheet" href="css/widgets/modal.css">        
+        <link rel="stylesheet" href="css/widgets/adl-setup.css">
+
+        <link rel="stylesheet" href="css/widgets/editor.override.css">
+
+        <!--link rel="stylesheet" href="css/screen.css"-->        
+        <link rel="stylesheet" href="css/font-awesome.min.css"> 
+		    <link rel="stylesheet" href="css/icomoon.css">        
+
+        <link rel="stylesheet" href="css/setup.css"> 
+
+        <link id="customer-styles" href="css/customer.css" rel="stylesheet">                        		    
+        <link rel="stylesheet" href="css/final.css">        
+		
+        <!--META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="Expires" CONTENT="-1"-->
+    </head>
+    <body>
+
+        <div class="ao-head">
+          <div class="ao-head-rel-close">
+            <div id="ao-rel-close-btn" class="ao-rel-close-btn ao-customer-border-color ao-toggle-btn-enabled">
+              <!--<span class="glyphicon glyphicon-remove"></span>-->
+			  <!--<i class="icomoon icomoon-icon-cross"></i>-->
+			  <i  class="ao-font-icon ao-font-icon-closerel "></i>
+			 
+			 
+            </div>           
+          </div>
+          <div class="ao-head-rel-status">
+            <p id="ao-head-rel" class="ao-head-rel">relationship:</p>
+            <p id="ao-head-rel-name" class="ao-head-rel-name">none open</p>
+          </div>
+
+          <div class="ao-head-menu">
+              <ul class="">              
+                <li id="ao-settings-dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">settings <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-header">App Settings</li>
+                      <li id="ao-settings-app" type="ao-settings-app" class="disabled"><a id="settings_setup" href="">Webcam, Speakers and Mic</a></li>
+                      <li id="ao-feedback" class="disabled"><a id="ao-feedback-link" href="">Feedback / Requests</a></li>
+
+                      <div id="ao_developer_logins">
+                        <li class="divider"></li>
+
+                        <li class="dropdown-header">Demo Login</li>
+
+                        <li type="ao-settings-login"><a id="settings_login_ds1"  href="">demosales1</a></li>
+                        <li type="ao-settings-login"><a id="settings_login_ds2" href="">demomanager</a></li>
+                        
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Testers Login</li>                  
+
+                        <li type="ao-settings-login"><a id="settings_login_am1" href="">manager_aaa_m1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_as1" href="">sales_aaa_m1_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_ac1" href="">client_aaa_m1_sa1_c1</a></li>                      
+                        <li class="divider"></li>
+                        <li type="ao-settings-login"><a id="settings_login_am1" href="">manager_aaa_m2</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_as1" href="">sales_aaa_m2_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_ac1" href="">client_aaa_m2_sa1_c1</a></li>                      
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_bbb_m1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_bbb_m1_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_bbb_m1_sa1_c1</a></li>
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_bbb_m2</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_bbb_m2_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_bbb_m2_sa1_c1</a></li>                      
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_ccc_m1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_ccc_m1_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_ccc_m1_sa1_c1</a></li>
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_ccc_m2</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_ccc_m2_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_ccc_m2_sa1_c1</a></li>                      
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_ddd_m1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_ddd_m1_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_ddd_m1_sa1_c1</a></li>                                            
+                        <li class="divider"></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bm1" href="">manager_ddd_m2</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bs1" href="">sales_ddd_m2_sa1</a></li>                      
+                        <li type="ao-settings-login"><a id="settings_login_bc1" href="">client_ddd_m2_sa1_c1</a></li>
+                      </div>
+                    </ul>
+
+                </li>                            
+                <li id="ao-info-dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">info <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li class="dropdown-header">Tools</li>
+
+                      <li type="ao-info" class="disabled"><a id="info_logout_else"  href="">Logout Elsewhere</a></li>
+                      <!--li type="ao-info" class="disabled"><a id="info_logged_occurences"  href="">Logged In Occurences</a></li-->
+
+                      <li class="divider"></li>
+                    </ul>
+                </li>
+                <li id="ao-logout">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">log in</a>
+                </li>                
+              </ul>
+          </div>          
+        </div>            
+
+        <div class="ao-left">
+          <div class="ao-nav-btn" id="ao-nav-btn-send-msg">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/send-message.png" id="ao-nav-btn-send-msg-icon" class="ao-nav-btn-icon"/>-->
+			    <!--<i id="ao-nav-btn-send-msg-icon" class="fa fa-fw fa-envelope  ao-nav-btn-glyph"></i>-->
+			    <i id="ao-nav-btn-send-msg-icon" class="ao-font-icon ao-font-icon-smess ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-send-msg-text">SEND MESSAGE</p>
+          </div>                           
+
+          <div class="ao-nav-btn" id="ao-nav-btn-send-file">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/send-file.png" id="ao-nav-btn-send-file-icon" class="ao-nav-btn-icon"/>-->
+			    <!--<i id="ao-nav-btn-send-file-icon" class="fa fa-fw fa-file  ao-nav-btn-glyph"></i>-->
+				<i id="ao-nav-btn-send-file-icon" class="ao-font-icon ao-font-icon-sfile ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-send-file-text">SEND A FILE</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-rec-msg">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/record-msg.png" id="ao-nav-btn-rec-msg-icon" class="ao-nav-btn-icon"/>-->
+			   <!--<i id="ao-nav-btn-rec-msg-icon" class="fa fa-fw fa-circle  ao-nav-btn-glyph"></i>-->
+			    <i id="ao-nav-btn-rec-msg-icon" class="ao-font-icon ao-font-icon-rec  ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-rec-msg-text">RECORD VOICE MESSAGE</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-join-meeting">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/join-meeting.png" id="ao-nav-btn-join-meeting-icon" class="ao-nav-btn-icon"/>-->
+			   <!--<i id="ao-nav-btn-join-meeting-icon" class="fa fa-fw fa-group  ao-nav-btn-glyph"></i>-->
+			   <i id="ao-nav-btn-join-meeting-icon" class="ao-font-icon ao-font-icon-meet  ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-join-meeting-text">JOIN A MEETING</p>
+          </div>
+          
+          <div class="ao-nav-btn" id="ao-nav-btn-make-call">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/make-call.png" id="ao-nav-btn-make-call-icon" class="ao-nav-btn-icon"/>-->
+			   <!--<i id="ao-nav-btn-make-call-icon" class="fa fa-fw fa-phone  ao-nav-btn-glyph"></i>-->
+			   <i id="ao-nav-btn-make-call-icon" class="ao-font-icon ao-font-icon-call  ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-make-call-text">MAKE A CALL</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-share-screen">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/share-screen.png" id="ao-nav-btn-share-screen-icon" class="ao-nav-btn-icon"/>-->
+			  <!--<i id="ao-nav-btn-share-screen-icon" class="fa fa-fw fa-desktop  ao-nav-btn-glyph"></i>-->
+			  <i id="ao-nav-btn-share-screen-icon" class="ao-font-icon ao-font-icon-sharescreen  ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-share-screen-text">SHARE SCREEN</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-text-chat">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/text-chat.png" id="ao-nav-btn-text-chat-icon" class="ao-nav-btn-icon"/>-->
+			  <!-- <i id="ao-nav-btn-text-chat-icon" class="fa fa-fw fa-comment  ao-nav-btn-glyph"></i>-->
+			  <i id="ao-nav-btn-text-chat-icon" class="ao-font-icon ao-font-icon-chat  ao-nav-btn-glyph"></i>
+               <div id="text-chat-badge" class="badge"></div>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-text-chat-text">TEXT CHAT</p>
+          </div>        
+        </div>
+        
+        <div class="ao-right">
+          <div class="ao-nav-btn" id="ao-nav-btn-promotion">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/promotions.png" id="ao-nav-btn-promotion-icon" class="ao-nav-btn-icon"/>-->
+			  <!-- <i id="ao-nav-btn-promotion-icon" class="fa fa-fw fa-bullhorn ao-nav-btn-glyph"></i>-->
+			  <i id="ao-nav-btn-promotion-icon" class="ao-font-icon ao-font-icon-promotion ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-promotion-text">PROMOTIONS</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-dashboard">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/dashboard.png" id="ao-nav-btn-dashboard-icon" class="ao-nav-btn-icon"/>-->
+			   <!--<i id="ao-nav-btn-dashboard-icon" class="fa fa-fw fa-bars ao-nav-btn-glyph"></i>-->
+			   <i id="ao-nav-btn-dashboard-icon" class="ao-font-icon ao-font-icon-dashboard ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-dashboard-text">DASHBOARD</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-account-management">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/settings.png" id="ao-nav-btn-account-management-icon" class="ao-nav-btn-icon"/>-->
+			  <!-- <i id="ao-nav-btn-account-management-icon" class="fa fa-fw fa-cog ao-nav-btn-glyph"></i>-->
+			  <i id="ao-nav-btn-account-management-icon" class="ao-font-icon ao-font-icon-accman ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-account-management-text">ACCOUNT MANAGEMENT</p>
+          </div>
+
+          <div class="ao-nav-btn" id="ao-nav-btn-vault">
+            <div class="ao-nav-btn-icon-container">
+              <!--<img src="img/ao/nav/send-file.png" id="ao-nav-btn-vault-icon" class="ao-nav-btn-icon"/>-->
+				<!--<i id="ao-nav-btn-vault-icon" class="fa fa-fw fa-file ao-nav-btn-glyph"></i>-->
+				<i id="ao-nav-btn-vault-icon" class="ao-font-icon ao-font-icon-vault ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-vault-text">VAULT</p>
+      
+      
+          </div>  
+
+          <div class="ao-nav-btn" id="ao-nav-btn-office-tools">
+            <div class="ao-nav-btn-icon-container">
+			<!--<i id="ao-nav-btn-office-tools-icon" class="fa fa-fw fa-calendar ao-nav-btn-glyph"></i>-->
+			<i id="ao-nav-btn-office-tools-icon" class="ao-font-icon ao-font-icon-offtools ao-nav-btn-glyph"></i>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-office-tools-text">OFFICE TOOLS</p>
+      
+      
+          </div>  
+
+  
+
+
+          <!--div class="ao-nav-btn" id="ao-nav-btn-messages">
+            <div class="ao-nav-btn-icon-container">
+              <img src="img/ao/nav/messages.png" id="ao-nav-btn-messages-icon" class="ao-nav-btn-icon"/>
+            </div>
+            <p class="ao-mav-btn-text" id="ao-nav-btn-messages-text">MESSAGES</p>
+          </div-->
+        </div>                               
+
+        <div class="ao-middle">
+          <div id="ao-drag-drop">
+            <div class="drag-helper"></div>
+            <div class="blocker"></div>
+          </div>
+          
+          <div id="ao-logo" class="ao-logo"></div>                    
+
+          <div id="mainStage">
+            <div id="main-content-dash" class="main-content">
+              <div id="ao-dashboard-nav-container" class="ao-dashboard-nav-container">
+              </div>  
+
+              <div id="ao-dashboard-list-container" class="ao-dashboard-list-container">
+                <div class="row ao-customer-color ao-pagination" >
+                  <div class="col-lg-4 col-1" >
+                    <a id="ao-dashboard-back" href="#" class="ao-customer-color" style="text-decoration:none; display:none">
+                      <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+					   <!--<i class="icomoon icomoon-icon-arrow-left"></i>-->
+					   <i class="ao-font-icon ao-font-icon-dashprev"></i>
+                      <span id="ao-dashboard-back-label">&nbsp;Teams Listing&nbsp;</span>
+                    </a>                    
+                    <button id="ao-dashboard-refresh" class="btn btn-default btn-clear ao-btn-small-enabled" style="outline-width:0">
+                       <!--<span class="glyphicon glyphicon-repeat"></span>-->
+					   <i class="ao-font-icon ao-font-icon-refresh"></i>
+                    </button>                    
+                  </div>
+                  <div id="ao-dashboard-index" class="col-lg-4 col-2" >
+                      <span id="ao-dashboard-index-label">1-50 of 300&nbsp;</span>                      
+                      <button id="ao-dashboard-left" class="btn btn-default btn-clear ao-btn-small-disabled ao-customer-color-disabled" style="outline-width:0">
+                        <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+						<!--<i class="icomoon icomoon-icon-arrow-left"></i>-->
+						 <i class="ao-font-icon ao-font-icon-dashprev"></i>
+                      </button>
+                      <button  id="ao-dashboard-right" class="btn btn-default btn-clear ao-btn-small-disabled" style="outline-width:0">
+                        <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+						<!--<i class="icomoon icomoon-icon-arrow-right"></i>-->
+						<i class="ao-font-icon ao-font-icon-dashnext"></i>
+                      </button>
+                  </div>                  
+                </div>
+
+                <div id="ao-dashboard-list-and-sub-container" >
+                  <table id="ao-dashboard-list" hspace="30" cellspacing='0' >
+                  </table>
+
+                  <div id="ao-dashboard-sub-container" class="ao-dashboard-sub-container">
+                  </div>  
+                </div>              
+               </div> 
+            </div>
+
+            <div id="ao-comms-container" class="ao-comms-container">
+              <div id="extruderTop" class="{title:'+ Note', url:'parts/extruderTop.html'}"></div>              
+              <div id="ao-comms-individual-container" class="ao-comms-individual-container"></div>
+              <div id="ao-presence-container">
+                <div class="dropup ao-customer-color" style="position:absolute; bottom:60px">
+                  <button class="btn btn-default btn-presence" data-toggle="dropdown" style="outline-width:0">Presence &nbsp;<span class="caret"></span></button>
+                  <ul id="ao-presence-list" class="dropdown-menu presence-menu">                  
+                  </ul>
+                </div>
+              </div>              
+              <div id="ao-test-container" class="ao-test-container"> 
+              </div>
+            </div>
+
+            <div id="ao-account-management-container" class="ao-account-management-container">              
+            </div>                                           
+
+            <div id="ao-promotion-container" class="ao-promotion-container">              
+            </div>
+
+            <div id="ao-login" class="ao-login">
+              <div id="ao-login-logo" class="ao-login-logo">
+                <img src="img/ao/client/logo-thumb.png"/>
+              </div>
+              <div id="ao-login-form" class="ao-login-form">
+                <input id="username" type="text" class="ao-login-input" placeholder="Username">
+                <input id="company-ident" type="text" class="ao-login-input" placeholder="Company Ident">
+                <input id="password" type="password" class="ao-login-input" placeholder="Password">
+                <div id="ao-login-btn-container" class="ao-login-btn-container">
+                  <button id="ao-login-btn" type="button" class="btn ao-login-btn">Login</button>
+                </div>
+              </div>                
+            </div>
+          </div> <!-- id="mainStage" -->            
+        <!--/div-->  <!-- inserted end main stage --> 
+          <div id="upload-progress-notification">
+            <div class="title">Uploading files...<span class="controls upload-collapse">Collapse</span><span class="controls upload-expand">Expand</span></div>
+            <div id="upload-progress-iframe"></div>
+            <div id="download-iframe"></div>
+          </div>
+          <div class="ao-foot">
+            <div id="ao-dashfooter">            
+              <div id="ao-list-filter" class="ao-list-filter ao-customer-border-color-disabled">
+                <div id="ao-list-filter-container" class="switch-toggle switch-3 switch-android large-9 columns ao-switch-toggle-disabled ao-customer-border-color-disabled">
+                  <input id="week-d1" name="view-d" type="radio" value="" checked disabled>
+                    <label for="week-d1" onclick="">All</label>
+                  <input id="month-d2" name="view-d" type="radio" data-filter="ReadInd" value="N" disabled>
+                    <label for="month-d2" onclick="">Missed</label>
+                  <input id="month-d3" name="view-d" type="radio" data-filter="FlaggedInd" value="Y" disabled>
+                    <label for="month-d3" onclick="">Flagged</label>
+                </div>
+              </div>
+
+              <div id="ao-list-search" class="ao-list-search">
+                <input type="search" name="search" placeholder="Type to search" id="search" value="" data-theme="a" disabled/>                                      
+              </div>
+
+              <!-- TODO the data-filter properties on the buttons shouldn't be needed if at some point this is converted to Handlebars templates based on Backbone models-->
+              <div id="ao-list-toggle-container" class="ao-list-toggle-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-1">
+                              <div id="ao-filter-toggle-call-btn" data-filter="C" class="ao-filter-toggle-btn span1">
+                                  <!--<img src="img/ao/nav/make-call.png" id="ao-filter-toggle-call-btn-icon" class="ao-filter-toggle-btn-icon"/>-->
+								  <!--<i id="ao-filter-toggle-call-btn-icon" class="fa fa-fw fa-phone ao-filter-toggle-btn-icon"></i>-->
+								  <i id="ao-filter-toggle-call-btn-icon" class="ao-font-icon ao-font-icon-call ao-filter-toggle-btn-icon"></i>
+								 
+                              </div> 
+                        </div>  
+                        <div class="col-lg-1">
+                              <div id="ao-filter-toggle-msg-btn" data-filter="ESM" class="ao-filter-toggle-btn span1">
+                                  <!--<img src="img/ao/nav/send-message.png" id="ao-filter-toggle-msg-btn-icon" class="ao-filter-toggle-btn-icon"/>-->
+								  <!--<i id="ao-filter-toggle-msg-btn-icon" class="fa fa-fw fa-envelope ao-filter-toggle-btn-icon"></i>-->
+								  <i id="ao-filter-toggle-msg-btn-icon" class="ao-font-icon ao-font-icon-smess ao-filter-toggle-btn-icon"></i>
+                              </div>  
+                        </div>  
+                        <div class="col-lg-1">
+                              <div id="ao-filter-toggle-chat-btn" data-filter="T" class="ao-filter-toggle-btn span1">
+                                  <!--<img src="img/ao/nav/text-chat.png" id="ao-filter-toggle-chat-btn-icon" class="ao-filter-toggle-btn-icon"/>-->
+								  <!--<i id="ao-filter-toggle-chat-btn-icon" class="fa fa-fw fa-comment ao-filter-toggle-btn-icon"></i>-->
+								  <i id="ao-filter-toggle-chat-btn-icon" class="ao-font-icon ao-font-icon-chat  ao-filter-toggle-btn-icon"></i>
+                              </div>  
+                        </div> 
+                        <div class="col-lg-1">
+                              <div id="ao-filter-toggle-file-btn" data-filter="F" class="ao-filter-toggle-btn span1">
+                                  <!--<img src="img/ao/nav/send-file.png" id="ao-filter-toggle-file-btn-icon" class="ao-filter-toggle-btn-icon"/>-->
+								  <!--<i id="ao-filter-toggle-file-btn-icon" class="fa fa-fw fa-file ao-filter-toggle-btn-icon"></i>-->
+								  <i id="ao-filter-toggle-file-btn-icon" class="ao-font-icon ao-font-icon-sfile ao-filter-toggle-btn-icon"></i>
+                              </div>  
+                        </div> 
+                        <div class="col-lg-1">
+                              <div id="ao-filter-toggle-flag-btn" data-filter="A" class="ao-filter-toggle-btn span1">
+                                  <!--<img src="img/ao/nav/settings.png" id="ao-filter-toggle-flag-btn-icon" class="ao-filter-toggle-btn-icon"/>-->
+								  <!--<i id="ao-filter-toggle-flag-btn-icon" class="fa fa-fw fa-cog ao-filter-toggle-btn-icon"></i>-->
+								  <i id="ao-filter-toggle-flag-btn-icon" class="ao-font-icon ao-font-icon-accman ao-filter-toggle-btn-icon"></i>
+                              </div>
+                        </div>
+                    </div>  
+                </div>             
+              </div>    
+            </div> <!-- Dash Footer -->
+            <div id="ao-commsfooter">
+              <div id="ao-rec-msg-footer" class="ao-rec-msg-footer"></div>
+
+              <div class="ao-make-call-footer" id="ao-make-call-footer"></div>
+
+              <div class="ao-jam-footer" id="ao-jam-footer"></div>
+
+              <div class="ao-vault-footer" id="ao-vault-footer"></div>
+            </div>
+
+            <div class="ao-testfooter" id="ao-testfooter"> 
+            </div>
+
+          </div>​
+          
+       </div> <!-- inserted end of middle -->
+      
+        <script src="resources/js/libs/modernizr.min.js"></script>
+
+        <script src="js/app/lib/jquery.min.js"></script>
+        <script src="js/app/lib/jquery-ui.js"></script>
+
+        <script src="resources/js/libs/jquery.ui.touch-punch.min.js"></script>
+        <!--script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script-->
+
+        <script src="js/app/lib/jquery.easing.1.3.js"></script>
+
+        <!--script src="js/app/lib/bootstrap.modal.js"></script-->                  
+
+        <!--script src=https://cdn.pubnub.com/pubnub.min.js ></script-->
+        <script src="js/app/lib/pubnub.js"></script>
+
+        <script src="js/app/lib/hashtag.js"></script>
+        
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+
+        <script src="resources/js/libs/fastclick.min.js"></script>
+
+        <!--script src="js/app/lib/jquery-modal.js"></script-->        
+        <script src="js/main.js"></script>             
+
+        <script src="js/app/constants/constants.js"></script>
+        <script src="js/app/globals/globals.js"></script>
+
+        <script src="js/app/lib/jquery-radiobutton.js"></script>
+        <script src="js/app/lib/blockUI.js"></script>
+        <!--script src="js/app/lib/pixastic.js"></script-->
+        <script src="js/app/lib/kendo.web.min.js" charset="utf-8"></script>
+        <script src="js/app/lib/mbExtruder.js"></script>
+        <script src="js/app/lib/css_browser_selector.js"></script>
+        <script src="js/app/lib/moment.js"></script>
+        <script src="resources/js/libs/underscore.min.js"></script>
+        <!--script src="resources/js/libs/backbone.min.js"></script-->
+        <script src="resources/js/libs/backbone.js"></script>
+        <script src="js/app/lib/jquery.slimscroll.js"></script>        
+
+        <!--script type="text/javascript" src="http://api.addlive.com/stable_v3/addlive-sdk.js"></script-->
+        <!--script src="js/app/lib/adl/addlive-sdk.js"></script-->
+        <script src="js/app/lib/adl3/addlive-sdk.js"></script>
+        <!--script type="text/javascript" src="addlive-sdk.js"></script-->
+        <!--script type="text/javascript" src="addlive-mobile-sdk.js"></script-->        
+
+        <!--script src="js/app/lib/adl/scripts.js"></script-->
+        <!--script src="js/app/lib/adl/sha256.js"></script-->        
+        <!--script src="js/app/lib/adl/adl-installation-test.js"></script-->
+        <!--script src="js/app/lib/adl/adl-utils.js"></script-->
+        <!--script src="js/app/controllers/adlController.js"></script-->  
+
+        <script src="js/app/lib/adl3/scripts.js"></script>
+        <script src="js/app/lib/adl3/sha256.js"></script>        
+        <script src="js/app/lib/adl3/adl-installation-test.js"></script>
+        <script src="js/app/lib/adl3/adl-utils.js"></script>        
+        <script src="js/app/controllers/adl3/adlController.js"></script>  
+
+		<script src="js/app/lib/screenfull.min.js"></script>		
+
+        <script src="resources/js/libs/gsap/plugins/CSSPlugin.min.js"></script>
+        <script src="resources/js/libs/gsap/easing/EasePack.min.js"></script>
+        <script src="resources/js/libs/gsap/TweenLite.min.js"></script>
+
+        <script src="js/app/utils/templates.js"></script>        
+        <script src="js/app/utils/eventbus.js"></script> 
+        <script src="js/app/utils/extensions.js"></script>
+        <script src="js/app/utils/config.js"></script>        
+        <script src="js/app/utils/utils.js"></script>
+        <script src="js/app/utils/navButtonUtils.js"></script>
+        <script src="js/app/utils/toggleButtonUtils.js"></script>        
+        <script src="js/app/utils/dashViewStatus.js"></script>
+
+        <script src="js/app/utils/nativeIn.js"></script>
+
+        <script src="resources/js/hb.min.js"></script>        
+        <script src="resources/js/app.tmp.js"></script>        
+
+        <script src="js/app/controllers/appController.js"></script>
+        <script src="js/app/controllers/dashController.js"></script>
+        <script src="js/app/controllers/relationshipController.js"></script>
+        <script src="js/app/controllers/userController.js"></script>        
+        <script src="js/app/controllers/pubnubController.js"></script>
+        <script src="js/app/controllers/joinMeetingController.js"></script>
+        <script src="js/app/controllers/dataController.js"></script>
+        <script src="js/app/controllers/soundController.js"></script>
+        <script src="js/app/controllers/incomingController.js"></script>
+        <script src="js/app/controllers/sendFileController.js"></script>
+        <script src="js/app/controllers/vaultController.js"></script>
+        <script src="js/app/controllers/diaryController.js"></script>
+        <script src="js/app/controllers/sendMsgController.js"></script>
+        <script src="js/app/controllers/textChatController.js"></script>
+        <script src="js/app/controllers/recordMsgController.js"></script>
+        <script src="js/app/controllers/dashAccManagerController.js"></script>
+        <script src="js/app/controllers/dashPromotionController.js"></script>
+        <script src="js/app/controllers/notesController.js"></script>
+		
+        <script src="js/app/views/notificationDetail.js"></script>
+
+        <script src="js/dev/conf.js"></script>
+
+        <script src="js/app/models/collections.js"></script>
+        <script src="js/app/models/datamapping.js"></script>
+        <script src="js/app/models/dashboardRelEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationCallEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationMsgEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationFileEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationTextChatEntry.js"></script>
+        <script src="js/app/models/dashboardNotificationAccManEntry.js"></script>
+
+        <script src="js/app/models/user/adlScopeUser.js"></script>
+        <script src="js/app/models/user/relationshipCollection.js"></script>
+        <script src="js/app/models/user/relationships.js"></script>
+        <script src="js/app/models/user/relationshipType.js"></script>
+        <script src="js/app/models/user/user.js"></script>
+
+        <script src="js/app/mobile/mobmain.js"></script>                
+		
+        <script type="text/javascript" src="//static.twilio.com/libs/twiliojs/1.1/twilio.min.js"></script>
+		    <script src="js/app/controllers/twilioController.js"></script>
+		
+        <script src="js/app/lib/adl3/setup/00_Namespace.js"></script>
+        <script src="js/app/lib/adl3/setup/conf.tmpl.js"></script>
+        <script src="js/app/lib/adl3/setup/SA_Connectivity.js"></script>
+        <script src="js/app/lib/adl3/setup/SA_DevicesSetup.js"></script>
+        <script src="js/app/lib/adl3/setup/SetupAssistant.js"></script>
+
+		<script type="text/javascript">
+		/*
+		if(AO.twilio_enabled){
+			$('.ao-right').append('<button class="call" onclick="twilioController.record();">Record</button> <button class="call" onclick="twilioController.recordStop();">Stop Record</button><button class="call" onclick="twilioController.call();">Call</button> <button class="hangup" onclick="twilioController.hangup();">Hangup</button><input type="text" id="number" name="number" placeholder="Enter a phone number or client to call"/><div id="log">Loading pigeons...</div>')
+		}
+		 
+		
+		Twilio.Device.ready(function (device) {
+			$("#log").text("Client is ready");
+		  });
+	 
+		  Twilio.Device.error(function (error) {
+			$("#log").text("Error: " + error.message);
+		  });
+	 
+		  Twilio.Device.connect(function (conn) {
+			$("#log").text("Successfully established call");
+		  });
+	 
+		  Twilio.Device.disconnect(function (conn) {
+			$("#log").text("Call ended");
+		  });
+	 
+		  function twilioCall() {
+			// get the phone number or client to connect the call to
+			var  conferenceId = "aoRelationshipId";
+			params = {"conferenceId": conferenceId };
+			Twilio.Device.connect(params);
+		  }
+	 
+		  function twilioHangup() {
+			Twilio.Device.disconnectAll();
+		  }
+		  */
+		</script>
+
+    <!--script src="cordova.js"></script-->
+
+        <div id="dialog-confirm" title="" class="dialog_confirm_zindex">
+            <p id="dialog-confirm-text"></p>
+        </div>   
+
+        <div id="preview-android-toast" class="preview-android-toast" style="position:absolute; bottom:10%; width:100%; display:none">
+            <div style="background-color:white; width:40%; margin-left: auto; margin-right: auto; height:auto; padding:0.35em 0.3em 0 0.3em; text-align:center; border-radius:5px; border:1px solid; box-shadow: 1x 1px 1px #888888; border-color:#1d1d1d">
+                <p id="preview-android-toast-text" style="font-size:1.4em">Loading...</p>
+            </div>
+        </div>                        
+
+        <div id="ao-temp-store" style="display:none"></div>
+
+        <div class="modal fade in" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="defaultModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body" id="defaultModalBody">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="defaultModalClose">Close</button>
+                <button type="button" class="btn btn-primary" id="defaultModalOk">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <div class="modal fade in" id="block" tabindex="-1" role="dialog" aria-labelledby="miniModalLabel" aria-hidden="true"></div>
+
+        <div class="modal fade in" id="miniModal" tabindex="-1" role="dialog" aria-labelledby="miniModalLabel" aria-hidden="true"></div>
+        <div class="alert alert-success" style="display: none;">
+          <button type="button" class="close" aria-hidden="true">×</button>
+        </div>
+        <div class="alert alert-info" style="display: none;">
+          <button type="button" class="close" aria-hidden="true">×</button>
+        </div>
+        <div class="alert alert-warning" style="display: none;">
+          <button type="button" class="close" aria-hidden="true">×</button>
+        </div>
+        <div class="alert alert-danger" style="display: none;">
+          <button type="button" class="close" aria-hidden="true">×</button>
+        </div>
+        <div class="alert alert-loading" style="display:none;">
+          <div class="general-loader7" style="float:right; position: relative; top: -5px;"></div>
+          <button type="button" class="close" aria-hidden="true" style="display:none">×</button>
+        </div>        
+
+
+        <!--div id="dev-console">
+              <div class="dev-console-message-output">
+                  <div id="dev-console-message-output">
+
+                  </div>
+                  <div class="dev-console-status-area-title">messages</div>
+                  <button class="btn btn-danger" id="dev-console-clear-button">clear</button>
+              </div>
+        </div-->
+		
+
+        <!--div class="overlay"></div>
+        <div id="modal1" class="ao-modal" style="min-height: 600px;">
+            <div class="ao-modal-header"><button id="ao-modal1-closex" class="ao-modal-close" type="button">×</button><h3>AO Setup</h3></div>
+            <div class="ao-modal-body">
+              <div id="ao-modal-body-su"></div>
+            </div>
+            <div class="ao-modal-footer"><a id="ao-modal1-ok" class="ao-modal-btn ao-modal-btn-primary">&nbsp; Ok &nbsp;</a> <a id="ao-modal1-cancel" class="ao-modal-btn"> Cancel </a> </div>        
+        </div> 
+        <a class="modalLink" href="#modal1" style="display:none"></a-->
+
+        <!--div id="modal2" class="ao-modal">
+            <div id="ao-modal-header" class="ao-modal-header"><button class="ao-modal-close" type="button">×</button><h3>Fufufufufu</h3></div>
+            <div id="ao-modal-body" class="ao-modal-body"></div>        
+            <div id="ao-modal-footer" class="ao-modal-footer"><a class="ao-modal-btn ao-modal-btn-primary">&nbsp; Ok &nbsp;</a> <a class="ao-modal-btn"> Cancel </a> </div>        
+        </div>         
+        <a class="modalLink" href="#modal2" style="display:none"></a-->          
+        <!--              Click the "Install Plugin" button.<br><br>
+              Please refresh this webpage after installation and setup.<br><br>
+              <a id="ao-install-plugin" class="ao-modal-btn ao-modal-btn-primary" onclick="window.open('http://www.econumysecure.com/econumyab/pbversion/ao007/adltest/Setup/');">&nbsp; Install Plugin &nbsp;</a>-->
+    </body>
+</html>

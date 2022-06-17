@@ -1,0 +1,36 @@
+{
+	"ring_tones": [
+		{"id":"1", "display_name":"Call Ring Tone", 	"system":true, "call_tone":true, 	"meeting_tone":false, 	"location":"assets/sounds/call-ring"},
+		{"id":"2", "display_name":"Meeting Ring Tone", 	"system":true, "call_tone":false, 	"meeting_tone":true, 	"location":"assets/sounds/meeting-ring"}
+	],
+	"calling_tones": [
+		{"id":"1", "display_name":"Calling", "system":true, "current":true, "location":"assets/sounds/calling"}
+	],
+	"disconnect_tones": [
+		{"id":"1", "display_name":"Disconnect", "system":true, "current":true, 	"location":"assets/sounds/disconnect"}
+	],
+    "chat_tones": [
+        {"id":"1", "display_name":"Text Chat Tone", "system":true, "current":true,  "location":"assets/sounds/chat01"}
+    ],
+    "rec_msg": [
+        {"id":"1", "display_name":"Start Recording Tone", "system":true, "current":true,  "location":"assets/sounds/chat03"}
+    ],
+    "tc_sent": [
+        {"id":"1", "display_name":"Text Chat Sent", "system":true, "current":true,  "location":"assets/sounds/tc-sent"}
+    ],
+    "tc_received": [
+        {"id":"1", "display_name":"Text Chat Received", "system":true, "current":true,  "location":"assets/sounds/tc-received"}
+    ],
+    "email_sent": [
+        {"id":"1", "display_name":"Email Sent", "system":true, "current":true,  "location":"assets/sounds/email-sent"}
+    ],
+    "email_received": [
+        {"id":"1", "display_name":"Email Received", "system":true, "current":true,  "location":"assets/sounds/email-received"}
+    ],
+    "file_uploaded": [
+        {"id":"1", "display_name":"File Uploaded", "system":true, "current":true,  "location":"assets/sounds/file-uploaded"}
+    ],
+    "file_received": [
+        {"id":"1", "display_name":"File Received", "system":true, "current":true,  "location":"assets/sounds/file-received"}
+    ]                                 
+}

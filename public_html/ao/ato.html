@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ao-logged-out"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ao-logged-out"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ao-logged-out"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js ao-logged-out"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">        
+        <title>Android Timeout Results</title>
+        <meta name="description" content="">
+        <!--meta name="viewport" content="width=device-width"-->
+
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="teleport/css/bootstrap-theme.min.css">        
+        <link rel="stylesheet" href="teleport/css/jquery-ui.css">          
+        
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="ato/css/style.css">
+
+        <!--META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="Expires" CONTENT="-1"-->
+    </head>
+    <body>
+      
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Android Timeout Results</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <form class="navbar-form navbar-right">
+                <div class="form-group" id="serverSelection">
+                  <div style="float:left" class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-primary active">
+                      <input type="radio" name="options" id="aowsOn" autocomplete="off" checked> AO WS
+                    </label>
+                    <label class="btn btn-primary">
+                      <input type="radio" name="options" id="aowsMiniOn" autocomplete="off"> AO WS Mini
+                    </label>               
+                  </div>
+                </div>                
+                <div class="form-group">
+                  <input id="userid" type="text" placeholder="Userid" class="form-control" value="ato00">
+                </div>
+                <div class="form-group">
+                  <input id="password" type="password" placeholder="Password" class="form-control" value="password">
+                </div>
+                <button id="signin" type="submit" class="btn btn-success">Sign in</button>
+              </form>
+            </div><!--/.navbar-collapse -->
+          </div>
+        </nav>
+
+        <div class="jumbotron">
+          <div class="container"  style="margin-bottom:10px">
+            <form class="bs-example bs-example-form" data-example-id="simple-input-groups">
+
+                <div class="input-group" style="margin-bottom:5px">
+                  <span class="input-group-addon" id="testidfield">@</span>
+                  <input id="testid" type="text" class="form-control" placeholder="Test Id (optional)" aria-describedby="testidfield">
+                </div>
+
+                <div>
+                    <div style="float:left" class="btn-group" data-toggle="buttons">
+                      <label class="btn btn-primary active">
+                        <input type="radio" name="options" id="autoOff" autocomplete="off" checked> Auto Update Off
+                      </label>
+                      <label class="btn btn-primary">
+                        <input type="radio" name="options" id="autoOn" autocomplete="off"> Auto Update On
+                      </label>               
+                    </div>
+
+                    <div style="float:right">
+                        <button id="fetch" type="button" class="btn btn-primary">Fetch</button>
+                        <button id="start" type="button" class="btn btn-primary">Start</button>
+                    </div>
+                </div>                                           
+            </forn>
+          </div>
+            <div class="container">
+                <p id="lastresults"></p>
+            </div>                          
+        </div>
+
+        <div id="ao-results" class="ao-results" style="overflow: auto">           
+        </div> 
+
+        <script src="teleport/js/lib/modernizr.min.js"></script>
+
+        <script src="teleport/js/lib/jquery.js"></script>
+        <script src="teleport/js/lib/bootstrap.min.js"></script> 
+
+        <script src="ato/js/script.js"></script>
+        <script src="ato/js/data.js"></script>
+
+        <script src="teleport/js//mobile/mobmain.js"></script>                
+
+        <script src="teleport/js/lib/bowser.min.js"></script> 
+
+        <!--script type="text/javascript" src="js/preload/companyPreload.php"></script-->
+
+        <div id="preview-android-toast" class="preview-android-toast" style="position:absolute; bottom:10%; width:100%; display:none">
+            <div style="background-color:white; width:40%; margin-left: auto; margin-right: auto; height:auto; padding:0.35em 0.3em 0 0.3em; text-align:center; border-radius:5px; border:1px solid; box-shadow: 1x 1px 1px #888888; border-color:#1d1d1d">
+                <p id="preview-android-toast-text" style="font-size:1.4em">Loading...</p>
+            </div>
+        </div>                        
+
+<!-- Remove once stack modal is ready -->
+        <div class="modal fade in" id="defaultModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="defaultModalXClose">&times;</button>
+                <h4 class="modal-title" id="defaultModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body" id="defaultModalBody">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="defaultModalClose">Close</button>
+                <button type="button" class="btn btn-primary" id="defaultModalOk">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+<!-- Remove once stack modal is ready -->
+
+    </body>
+</html>

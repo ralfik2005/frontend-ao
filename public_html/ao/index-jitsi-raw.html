@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ao-logged-out"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ao-logged-out"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ao-logged-out"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible">
+  <title>SP Jitsi Raw Test</title>
+  <meta content="" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://atlassian.video/external_api.js"></script>
+
+  <style type="text/css">
+    iframe {
+      border: 0;
+    }
+    #videoContainer {
+      width: 100%;
+      height: 100%;
+      background-color: #474747;
+      display:none;
+      position: fixed;
+      bottom: 0;
+      left:0;
+    }
+  </style>
+</head>
+
+<body class="layout layout-header-fixed layout-sidebar-fixed not-accounts search-on">  
+  <script>
+
+    var AtlVideoClass = {};
+
+    AtlVideoClass = function() {
+        this.TAG = "AtlVideoClass";
+        this.ROOM = "StayPrivate";
+        this.videoButton;
+        this.videoContainer;
+        this.videoParticipants;
+        this.doOncePerCall;
+        this.api;
+    }
+
+    AtlVideoClass.prototype = {
+
+      init:function() {
+          var self = this;
+          self.videoButton = document.getElementById("videoButton");
+          self.videoContainer = document.getElementById("videoContainer");
+          self.videoParticipants = document.getElementById("videoParticipants");
+           
+          var domain = "atlassian.video";
+          var room = self.ROOM;
+          var width = "100%";
+          var height = "100%";
+          var htmlElement = document.getElementById("videoContainer");
+          var configOverwrite = {};
+          var interfaceConfigOverwrite = {
+            filmStripOnly: false,
+            REMOTE_THUMBNAIL_RATIO: 16 / 9,
+            SHOW_JITSI_WATERMARK: false,
+            //MAIN_TOOLBAR_BUTTONS: ['microphone', 'camera', 'desktop', 'fullscreen', 'fodeviceselection', 'hangup'],
+            TOOLBAR_BUTTONS: [
+            //main toolbar
+            'microphone', 'camera', 'desktop', 'fullscreen', 'fodeviceselection', 'hangup', // jshint ignore:line
+            //extended toolbar
+            'recording', 'etherpad', 'sharedvideo', 'dialout', 'settings', 'raisehand', 'filmstrip'],
+            SHOW_WATERMARK_FOR_GUESTS: false,
+            SHOW_BRAND_WATERMARK: false,
+            BRAND_WATERMARK_LINK: "",
+            SHOW_POWERED_BY: false,
+            GENERATE_ROOMNAMES_ON_WELCOME_PAGE: false,
+            APP_NAME: "StayPrivate",        
+          };
+           
+          self.videoButton.addEventListener("click", function(e) {
+           
+            if (!self.videoContainer.style.display || self.videoContainer.style.display === "none") {       
+              self.videoContainer.style.display = "block";
+              self.videoButton.innerText = "Close video conference";
+           
+              self.api = new JitsiMeetExternalAPI(domain, room, width, height,
+                htmlElement, configOverwrite, interfaceConfigOverwrite);
+           
+              self.api.addEventListener("participantJoined", function(data) {
+                self.videoParticipants.innerText = self.api.getNumberOfParticipants();                          
+                console.log("participantJoined");
+              });
+           
+              self.api.addEventListener("videoConferenceJoined", function(data) {
+                var videoParticipantName = document.getElementById("videoParticipantName").value;
+           
+                console.log("videoConferenceJoined");
+           
+                self.api.executeCommand('displayName', videoParticipantName);
+                self.videoParticipants.innerText = self.api.getNumberOfParticipants();
+                 
+              });
+           
+              self.api.addEventListener("participantLeft", function(data) {
+                self.videoParticipants.innerText = self.api.getNumberOfParticipants();
+              });
+           
+              self.api.addEventListener("videoConferenceLeft", function(data) {
+                console.log("videoConferenceLeft");
+                self.videoParticipants.innerText = self.api.getNumberOfParticipants();
+              });
+           
+            } else {
+              self.videoContainer.style.display = "none";
+              self.videoButton.innerText = "Join video conference";
+              self.api.executeCommand('hangup');
+              self.api.addEventListener("readyToClose", function(data) {
+                console.log("readyToClose");
+                self.videoParticipants.innerText = "0";
+                self.api.removeEventListeners(["participantJoined", "participantLeft", "videoConferenceJoined", "videoConferenceLeft"]);
+                self.api.dispose();
+              });               
+            }           
+          });
+      }
+    };
+  </script>  
+
+  <div id="atl_container">
+    <div>
+        Name: <input type="text" id="videoParticipantName" value="StayPrivate">
+    </div>
+    <button id="videoButton">Join video conference</button>
+    <div>Number of participants: <span id="videoParticipants">0</span></div>
+     
+    <div id="videoContainer"></div>
+  </div>  
+
+  <script type="text/javascript">
+    setTimeout(function() {
+      if (!window.AO) {
+        AO = {};
+      }
+            
+      AO.atlVideo = new AtlVideoClass();                        
+      AO.atlVideo.init();
+    }, 500);
+  </script>  
+
+</body>
+</html>

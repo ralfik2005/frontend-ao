@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Performance Test</title>
+        <link rel="stylesheet" href="css/bootstrap.css">    
+        <script src="perindex/js/jquery.min.js"></script>        
+        <script src="perindex/js/bootstrap.js"/></script>
+        <script src="perindex/js/fastclick.js"/></script>
+	</head>
+	<body>
+
+        <h4>Login</h4>
+        <div style="width:100%">
+            <table class="table" id="loginTable"><thead><tr><th>User</th><th>Company</th><th>Password</th><th>Company</th></tr></thead>
+            	<tbody>
+            		<tr>
+            			<td>
+              				<input id="username" type="text" name="username" spellcheck="false" autocomplete="off" value="aaa01">            				
+            			</td>>
+            			<td>
+              				<input id="compident" type="text" name="compident" spellcheck="false" autocomplete="off" value="aaa">            				
+            			</td>>
+            			<td>
+              				<input id="password" type="password" name="password" spellcheck="false" autocomplete="off" value="password">            				
+            			</td>>
+            			<td>
+              				<input id="company" type="text" name="company" spellcheck="false" autocomplete="off" value="companyaaa">            				
+            			</td>>            			            			            			
+            	</tbody>
+            </table>
+        </div>
+        
+        <label class="form-check-label" for="isNative">Run Native Scripts</label>
+        <input type="checkbox" class="form-check-input" id="isNative">
+
+        <button id="start" style="height:30px">Start</button>
+        <br><br>
+
+		<div id="error" style="color:red"></div>
+
+        <h4>Stats</h4>
+        <div id="statsTableContainer" style="width:100%">
+            <table class="table" id="statsTable">
+            <thead>
+            <tr>
+            	<th id="currentTotalHeader">Running Total Time</th><th>Cust and Preload Duration</th><th>Records Count</th><th>Records Duration</th><th>Images Count</th><th>Images Duration</th>
+            </tr>
+        	</thead>
+            <tbody>
+            <tr>
+            	<td id="totalTime"></td>
+            	<td id="cTime"></td>
+            	<td id="rCount"></td>
+            	<td id="rDuration"></td>
+            	<td id="iCount"></td>
+            	<td id="iDuration"></td>
+            </tr>            	
+            </tbody></table>
+        </div>
+
+        <h4>Results</h4>
+        <div id="resultsTableContainer" style="width:100%">
+            <table class="table" id="resultsTable"><thead><tr><th>API</th><th>Duration</th><th>Records Returned</th><th>Average</th></tr></thead><tbody></tbody></table>
+        </div><br><br>
+
+		<!-- Modal -->
+		<div id="mainModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog" style="z-index:1041">
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Modal</h4>
+		      </div>
+		      <div class="modal-body">
+				<div class="input-group input-group-sm">
+				  <span class="input-group-addon" id="sizing-addon3">Enter Your Name</span>
+				  <input id="s" type="text" class="form-control" placeholder="Enter your name" aria-describedby="sizing-addon3" value="Savi">
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optNegative" value="noNegative" checked="checked">No Negative Answers</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optNegative" value="allowNegative">Allow Negative Answers</label>
+				</div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Start Challenge</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+
+		<script>
+			$("body").css("padding", "40px").css("padding-top", "5px");
+		</script>		
+        <script type="text/javascript" src="perindex/js/index.js"></script>		
+	</body>	
+</html>

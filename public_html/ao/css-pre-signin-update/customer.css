@@ -1,0 +1,303 @@
+/*==========  Mobile First  ==========*/
+
+/*********************************************************************
+    General Navigation and buttons
+*********************************************************************/
+
+.account-controls .button:hover{background-color: @color;}
+.btn-clear{color: @color; border-color: @border-color;}
+#ao-diary-container .button:hover{background-color: @color;}
+
+.ao-customer-color {
+	color: #002333;
+}
+
+.ao-customer-inv-background-color {
+  background-color: #002233;
+}
+
+.ao-logo {background-image: url('../img/ao/client/logo.png');}
+
+#twiloSetupAssistant .customer-logo { 
+	background: url(../img/ao/client/logo-thumb.png) no-repeat; 
+}
+
+#adlSetupAssistant .customer-logo {
+  background: url(../img/ao/client/logo-thumb.png) no-repeat;
+}
+
+.ao-login-logo {
+	background-image:url('../img/ao/client/logo-small.png');
+}
+
+@keyframes aoPinBtnHover
+{
+    0% {background:white;color: #002333;}
+    100% {background:#002333;color: white;} /* select disabled color */
+}
+
+@-webkit-keyframes aoPinBtnHover /* Safari and Chrome */
+{
+    0% {background:white;color: #002333;}
+    100% {background:#002333;color: white;} /* select disabled color */
+}
+
+@keyframes aoPinIndicatorOn
+{
+    0% {background: white;}
+    100% {background: #002333;}
+}
+
+@-webkit-keyframes aoPinIndicatorOn /* Safari and Chrome */
+{
+    0% {background: white;}
+    100% {background: #002333;}
+}
+
+.ao-mav-btn-text.ao-customer-color, .ao-nav-btn-glyph.ao-customer-color {
+    color: #002333;
+}
+
+.ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color, .ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+    color: #888888; /* specifically for phones as they need to distinguish between disabled and deselected (but enabled) states */
+}
+
+.ao-customer-color-disabled {
+	color:#d8dee2
+}
+
+.ao-customer-background-color {
+	background: #002333;
+	background-color: #002333;
+}
+
+.ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+    background-color: #fafafa;
+}
+
+.ao-customer-color-nav-button-highlight {
+    color: #002333;
+}
+
+.ao-nav-tabs ul li.on.ao-customer-color-nav-button-highlight {
+    background-color: #002333;
+}
+
+.ao-customer-border-color {
+	border-left-color: #002333;
+    border-top-color: #002333;
+    border-right-color: #002333;
+    border-bottom-color: #002333;
+}
+
+.switch-toggle input:checked + label
+{
+  color:white;
+  background: #002333;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.switch-android {
+    border: 1px solid #002333;
+}
+
+.switch-android label {
+	border-right: 1px solid #002333;
+}
+
+.switch-android label:last-of-type {
+    border-right: 0;
+}
+
+.switch-android a {
+	background-color: #002333;
+}
+
+.ao-customer-border-color-disabled {
+	border-color: #d8dee2;
+}
+
+.ao-switch-toggle-disabled input:checked + label
+{
+	color:white;
+  	background: #d8dee2;
+}
+
+.ao-switch-toggle-disabled label {
+	border-right:1px solid #d8dee2;
+}
+
+.dropdown-menu.presence-menu li a .glyphicon-user{
+    color: #002333;
+}
+
+.dropdown-menu.presence-menu li a .glyphicon-user.presence-unavailable{
+    color: #d8dee2;
+}
+
+.switch-msg-candy {
+  color: #002333;
+}
+
+.switch-msg-candy label {
+  color: #002333;
+  border: 1px solid #002333;
+}
+
+.switch-msg-candy.switch-msg-candy-yellow a {
+  background-color: #002333;
+}
+
+/*********************************************************************
+	Main Navigation
+*********************************************************************/
+@keyframes aoNavEnabledBtnHover
+{
+	0% {background:white;}
+	100% {background:#7F8C8D;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnHover /* Safari and Chrome */
+{
+	0% {background:white;}
+	100% {background:#7F8C8D;} /* select disabled color */
+}
+
+@keyframes aoLargeNavEnabledBtnHover
+{
+    0% {background:transparent;}
+    100% {background:#7F8C8D;} /* select disabled color */
+}
+
+@-webkit-keyframes aoLargeNavEnabledBtnHover /* Safari and Chrome */
+{
+    0% {background:transparent;}
+    100% {background:#7F8C8D;} /* select disabled color */
+}
+
+@keyframes aoNavEnabledBtnIconHover
+{
+    0% {color: #002333;border-color:#002333;}
+    100% {color: #ffffff;border-color:#ffffff;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnIconHover /* Safari and Chrome */
+{
+    0% {color: #002333;border-color:#002333;}
+    100% {color:#ffffff;border-color:#ffffff;} /* select disabled color */
+}
+
+@keyframes aoNavEnabledBtnTextHover
+{
+    0% {color: #002333;}
+    100% {color: #ffffff;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnTextHover /* Safari and Chrome */
+{
+    0% {color: #002333;}
+    100% {color:#ffffff;} /* select disabled color */
+}
+
+@keyframes aoNavHighlightedBtnHover
+{
+    0% {background:#002333;}
+    100% {background:#7F8C8D;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavHighlightedBtnHover /* Safari and Chrome */
+{
+    0% {background:#002333;}
+    100% {background:#7F8C8D;} /* select disabled color */
+}
+
+
+/*********************************************************************
+	Widget Action Button
+*********************************************************************/
+.ao-widget-action:hover {	
+  	-webkit-transition: all 0.7s ease-out;
+  	-moz-transition: all 0.7s ease-out;
+  	transition: all 0.7s ease-out;	
+	background-color:#002333; 
+	/*color:#949494;*/   
+}
+
+.ao-widget-action:active {	
+  	-webkit-transition: all 0.5s ease-out;
+  	-moz-transition: all 0.5s ease-out;
+  	transition: all 0.5s ease-out;	
+	background-color:#949494; 
+	color:#ffffff;
+	font-weight: bolder;   
+}
+
+#vslider .ui-slider-range {
+	background:#002333;
+}
+
+/*********************************************************************
+	Volume Slider Button
+*********************************************************************/
+
+#logo-alpha {
+    opacity: 0.06;
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (portrait) {
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen 
+and (min-width : 600px)
+and (orientation: portrait),
+only screen
+and (min-width : 641px)
+and (orientation: landscape),
+only screen 
+and (min-device-width: 602px) 
+and (orientation : landscape) 
+and (-webkit-min-device-pixel-ratio: 1.331) 
+and (-webkit-max-device-pixel-ratio: 1.332),
+only screen
+and (min-device-width: 602px)
+and (orientation : landscape) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (device-aspect-ratio: 40/23) {
+
+    .ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+        background-color: #002333;
+    }
+
+    .ao-mav-btn-text.ao-customer-color, .ao-nav-btn-glyph.ao-customer-color {
+        color: #002333;
+    }
+
+    .ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color, .ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+        color: #002333; /* make sure we override this from the phone base style */
+    }
+
+    .ao-customer-color-nav-button-highlight {
+        background-color: #002333;
+    }
+
+    .ao-toggle-btn-pause .ao-toggle-btn.ao-customer-border-color, #ao-toggle-btn-add.ao-customer-border-color {
+        border-right-color: #002333;
+        border-color: #002333;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}

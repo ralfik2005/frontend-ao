@@ -1,0 +1,576 @@
+/*==========  Mobile First  ==========*/
+
+/* In future these LESS variables should be dynamically populated by PHP/node or whatever server side pre-processor*/
+/*********************************************************************
+    General Navigation and buttons
+*********************************************************************/
+
+#ao-diary-container .steps .step.active .step-icon {
+    color: @color;    
+}
+
+#ao-diary-container .steps a {
+    color: @color;
+}
+
+#ao-diary-container .ao-btn-bar label:last-of-type {
+    border-color: @border-color;
+}
+
+#ao-diary-container .steps .step-icon {
+    border: 2px solid @border-color;
+}
+
+#ao-diary-container .steps .step-icon {
+    background-color: @border-color;
+}
+
+#ao-diary-container .steps .step.active .step-icon {
+    color: @color;
+}
+
+#ao-diary-container .steps .step-segment:after {
+    background-color: @background-color;
+}
+
+.quick-email .quick-email-header {
+    background-color: @background-color;
+}
+
+.switch-primary .switch-input:checked ~ .switch-track {
+  background-color: @background-color;
+}
+
+.switch-primary .switch-input:checked ~ .switch-thumb {
+  border-color: @background-color;
+}
+
+.md-control-label {
+    color: @color;    
+}
+
+.account-controls .button:hover{background-color: @color;}
+.btn-clear{color: @color; border-color: @border-color;}
+#ao-diary-container .button:hover{background-color: @color;}
+
+.ao-font-icon-flag {
+    color: @color-disabled;
+}
+
+td.note-cell {
+    color: @color-disabled;
+}
+
+.title-bar-title {
+    color: @color;
+}
+
+.btn-primary {
+    background-color: @background-color;
+    border-color: @border-color;   
+    //color: @color;
+}
+
+.btn-primary:a {
+    background-color: @color-nav-button-highlight;
+}
+
+.btn-outline-primary {
+    border-color: @border-color;   
+    color: @color;
+}
+
+.btn-outline-primary:a {
+    background-color: @color-nav-button-highlight;
+    color: @color;
+}
+
+.btn-outline-primary:focus {
+    background-color: @color-nav-button-highlight;    
+}
+
+.btn-outline-primary.focus {
+    background-color: @color-nav-button-highlight;    
+}
+
+.dropdown-menu>li>a:hover {
+    background-color: @color-nav-button-highlight;    
+    color: #fff;
+}
+
+.dropdown-menu>li>a:focus {
+    background-color: @color-nav-button-highlight;    
+    color: #fff;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:focus {
+    background-color: @background-color;
+}
+
+.navbar-default .sidenav-toggler .bar-line.in {
+//    background-color: @background-color;    
+}
+
+.link-muted:hover, .link-muted:focus {
+    color: @color;
+}
+
+#compose-action-bar {
+    border-color: @border-color;    
+}
+
+.ao-msg-attach-file-label {
+    border-color: @border-color;    
+}
+
+.btn-primary.disabled:hover {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-primary.disabled:focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-primary.disabled.focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-primary[disabled]:hover {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-primary[disabled]:focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-primary[disabled].focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+.btn-outline-primary:active {
+    background-color: @color-nav-button-highlight;
+}
+
+.btn-outline-primary.active {
+    background-color: @color-nav-button-highlight;
+}
+
+.open>.btn-outline-primary.dropdown-toggle {
+    background-color: @color-nav-button-highlight;
+}
+
+.btn-outline-primary:hover {
+    background-color: @color-nav-button-highlight;
+}
+
+fieldset[disabled] .btn-primary:hover {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+fieldset[disabled] .btn-primary:focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+fieldset[disabled] .btn-primary.focus {
+    background-color: #a9a9a9;
+    border-color: @border-color-disabled;
+    color: @color-disabled;     
+}
+
+#ao-login-btn {
+    background-color: @background-color;
+    border-color: @border-color;   
+    //color: @color;    
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background-color: @background-color;
+}
+
+.navbar-default .navbar-header {
+    background-color: @background-color;    
+}
+
+.navbar-default .sidenav-toggler.collapsed {
+    background-color: @background-color;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: @color-nav-button-highlight;
+}
+
+.ao-logo {
+	background-image: url('@{logo-root}logo.png?version=@{cb}');
+}
+
+#twiloSetupAssistant .customer-logo { 
+	background: url('@{logo-root}logo-thumb.png?version=@{cb}') no-repeat; 
+}
+
+#adlSetupAssistant .customer-logo {
+    background: url('@{logo-root}logo-thumb.png?version=@{cb}') no-repeat;
+}
+
+.ao-login-logo {
+	background-image:url('@{logo-root}logo-small.png?version=@{cb}');
+}
+
+@keyframes aoPinBtnHover
+{
+    0% {background:white;color: @color;}
+    100% {background:#002333;color: white;} /* select disabled color */
+}
+
+@-webkit-keyframes aoPinBtnHover /* Safari and Chrome */
+{
+    0% {background:white;color: @color;}
+    100% {background:#002333;color: white;} /* select disabled color */
+}
+
+@keyframes aoPinIndicatorOn
+{
+    0% {background:white;}
+    100% {background: @color;}
+}
+
+@-webkit-keyframes aoPinIndicatorOn /* Safari and Chrome */
+{
+    0% {background: white;}
+    100% {background: @color;}
+}
+
+.ao-customer-color {
+    color: @color;
+}
+
+.ao-customer-inv-background-color {
+    background-color: @color;
+}
+
+.ao-mav-btn-text.ao-customer-color, .ao-nav-btn-glyph.ao-customer-color {
+    color: @color;
+}
+
+.ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color, .ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+    color: #888888; /* specifically for phones (and only the right hand nav buttons) as they need to distinguish between disabled and deselected (but enabled) states */
+}
+
+.ao-customer-color-disabled {
+    color: @color-disabled;
+}
+
+.ao-text-color-white {
+    color: #FFFFFF;
+}
+
+.ao-customer-background-color {
+    background: @background-color;
+    background-color: @background-color;
+}
+
+.ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+    background-color: #ffffff;
+}
+
+.ao-customer-color-nav-button-highlight {
+    background-color: @color-nav-button-highlight;
+}
+
+.ao-nav-tabs ul li.on.ao-customer-color-nav-button-highlight {
+    background-color: @color-nav-button-highlight;
+}
+
+.ao-customer-border-color {
+    border-left-color: @border-color;
+    border-top-color: @border-color;
+    border-right-color: @border-color;
+    border-bottom-color: @border-color;
+}
+
+.switch-toggle input:checked + label
+{
+  color:white;
+  background: @color;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.switch-android {
+    border: 1px solid @border-color;
+}
+
+.switch-android label {
+    border-right: 1px solid @border-color;
+}
+
+.switch-android label:last-of-type {
+    border-right: 0;
+}
+
+.switch-android a {
+    background-color: #002333;
+}
+
+.ao-customer-border-color-disabled {
+    border-color: @border-color-disabled;
+}
+
+.ao-switch-toggle-disabled input:checked + label
+{
+    color:white;
+    background: @color-disabled;
+}
+
+.ao-switch-toggle-disabled label {
+    border-right:1px solid @border-color-disabled;
+}
+
+.dropdown-menu.presence-menu li a .glyphicon-user{
+    color: @color;
+}
+
+.dropdown-menu.presence-menu li a .glyphicon-user.presence-unavailable{
+    color: #d8dee2;
+}
+
+/*********************************************************************
+    Send a Message
+*********************************************************************/
+
+.switch-msg-candy {
+  color: @color;
+}
+
+#ao-send-message-container .switch-msg-candy label {
+  border: 1px solid @border-color;
+}
+
+.switch-msg-candy.switch-msg-candy-yellow a {
+  background-color: @color;
+}
+
+#ao-send-message-container .ao-editor-controls-container button {
+	background-color: @color;
+}
+.k-tool-icon.k-state-selected, .k-state-selected:link {
+	background-color: @color;
+}
+
+.k-button-group .k-tool-icon{
+	border-color: @border-color;
+}
+
+/*********************************************************************
+    Send a File
+*********************************************************************/
+#ao-upload-file .upload-button.hover{
+	background-color: @color;
+}
+
+#ao-upload-file .send-button.active{
+	background-color: @color;
+}
+.upload-progress .upload-bar{
+	background-color: @color;
+}
+/*********************************************************************
+   RVM
+*********************************************************************/
+.ao-toggle-btn-large{
+	color: @color;
+}
+/*********************************************************************
+   Text Chat
+*********************************************************************/
+.ao-send-text-chat-wrap button{
+	background-color: @color;
+}
+/*********************************************************************
+    Main Navigation
+*********************************************************************/
+@keyframes aoNavEnabledBtnHover
+{
+    0% {background:white;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnHover /* Safari and Chrome */
+{
+    0% {background:white;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+@keyframes aoLargeNavEnabledBtnHover
+{
+    0% {background:transparent;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+@-webkit-keyframes aoLargeNavEnabledBtnHover /* Safari and Chrome */
+{
+    0% {background:transparent;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+@keyframes aoNavEnabledBtnIconHover
+{
+    0% {color: @color;border-color:@color;}
+    100% {color: #ffffff;border-color:#ffffff;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnIconHover /* Safari and Chrome */
+{
+    0% {color: @color;border-color:@color;}
+    100% {color:#ffffff;border-color:#ffffff;} /* select disabled color */
+}
+
+@keyframes aoNavEnabledBtnTextHover
+{
+    0% {color: @color;}
+    100% {color: #ffffff;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavEnabledBtnTextHover /* Safari and Chrome */
+{
+    0% {color: @color;}
+    100% {color:#ffffff;} /* select disabled color */
+}
+
+@keyframes aoNavHighlightedBtnHover
+{
+    0% {background:@color;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+@-webkit-keyframes aoNavHighlightedBtnHover /* Safari and Chrome */
+{
+    0% {background:@color;}
+    100% {background:@widget-hover-background-color;} /* select disabled color */
+}
+
+
+
+/*********************************************************************
+    Log in
+*********************************************************************/
+.ao-login{
+	border-color: @border-color;
+}
+
+.ao-login-btn{
+	background-color: @color;
+	border-color: @border-color;
+}
+/*********************************************************************
+    Widget Action Button
+*********************************************************************/
+.ao-widget-action:hover {
+    .transition(all 0.7s ease-out;);
+    background-color: @widget-hover-background-color;
+}
+
+.ao-widget-action:active {
+    .transition(all 0.5s ease-out;);
+    background-color: @widget-active-background-color;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+#vslider .ui-slider-range {
+    background: @slider-range-background-color;
+}
+
+/*********************************************************************
+    Volume Slider Button
+*********************************************************************/
+
+#logo-alpha {
+    opacity: @logo-alpha
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (portrait) {
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen 
+and (min-width : 600px)
+and (orientation: portrait),
+only screen
+and (min-width : 641px)
+and (orientation: landscape),
+only screen 
+and (min-device-width: 602px) 
+and (orientation : landscape) 
+and (-webkit-min-device-pixel-ratio: 1.331) 
+and (-webkit-max-device-pixel-ratio: 1.332),
+only screen
+and (min-device-width: 602px)
+and (orientation : landscape) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (device-aspect-ratio: 40/23) {
+
+    .ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+        background-color: @color-nav-button-highlight;
+    }
+
+    .ao-mav-btn-text.ao-customer-color, .ao-nav-btn-glyph.ao-customer-color {
+        color: @color;
+    }
+
+    .ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color, .ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+        color: @color; /* make sure we override this from the phone base style */
+    }
+
+    .ao-customer-color-nav-button-highlight {
+        background-color: @color-nav-button-highlight;
+    }
+
+    .ao-text-color-white {
+        color: #ffffff;
+    }
+
+    .ao-toggle-btn-pause .ao-toggle-btn.ao-customer-border-color, #ao-toggle-btn-add.ao-customer-border-color {
+        border-right-color: @color;
+        border-color: @color;
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen 
+and (min-width : 992px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+}

@@ -1,0 +1,293 @@
+.account-controls .button:hover {
+  background-color: #203864;
+}
+.btn-clear {
+  color: #203864;
+  border-color: #203864;
+}
+#ao-diary-container .button:hover {
+  background-color: #203864;
+}
+.ao-logo {background-image: url('../img/ao/syncedup/logo.png');}
+#twiloSetupAssistant .customer-logo { 
+  background: url(../img/ao/syncedup/logo-thumb.png) no-repeat; 
+}
+#adlSetupAssistant .customer-logo {
+  background: url(../img/ao/syncedup/logo-thumb.png) no-repeat;
+}
+.ao-login-logo {
+  background-image:url('../img/ao/syncedup/logo-small.png');
+}
+@keyframes aoPinBtnHover {
+  0% {
+    background: white;
+    color: #203864;
+  }
+  100% {
+    background: #002333;
+    color: white;
+  }
+}
+@-webkit-keyframes aoPinBtnHover {
+  0% {
+    background: white;
+    color: #203864;
+  }
+  100% {
+    background: #002333;
+    color: white;
+  }
+}
+@keyframes aoPinIndicatorOn {
+  0% {
+    background: white;
+  }
+  100% {
+    background: #203864;
+  }
+}
+@-webkit-keyframes aoPinIndicatorOn {
+  0% {
+    background: white;
+  }
+  100% {
+    background: #203864;
+  }
+}
+.ao-customer-color {
+  color: #203864;
+}
+.ao-customer-inv-background-color {
+  background-color: #203864;
+}
+.ao-mav-btn-text.ao-customer-color,
+.ao-nav-btn-glyph.ao-customer-color {
+  color: #203864;
+}
+.ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color,
+.ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+  color: #888888;
+}
+.ao-customer-color-disabled {
+  color: #d8dee2;
+}
+.ao-text-color-white {
+  color: #FFFFFF;
+}
+.ao-customer-background-color {
+  background: #002333;
+  background-color: #002333;
+}
+.ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+  background-color: #ffffff;
+}
+.ao-customer-color-nav-button-highlight {
+  background-color: #203864;
+}
+.ao-nav-tabs ul li.on.ao-customer-color-nav-button-highlight {
+  background-color: #203864;
+}
+.ao-customer-border-color {
+  border-left-color: #203864;
+  border-top-color: #203864;
+  border-right-color: #203864;
+  border-bottom-color: #203864;
+}
+.switch-toggle input:checked + label {
+  color: white;
+  background: #203864;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.switch-android {
+  border: 1px solid #203864;
+}
+.switch-android label {
+  border-right: 1px solid #203864;
+}
+.switch-android label:last-of-type {
+  border-right: 0;
+}
+.switch-android a {
+  background-color: #002333;
+}
+.ao-customer-border-color-disabled {
+  border-color: #d8dee2;
+}
+.ao-switch-toggle-disabled input:checked + label {
+  color: white;
+  background: #d8dee2;
+}
+.ao-switch-toggle-disabled label {
+  border-right: 1px solid #d8dee2;
+}
+.dropdown-menu.presence-menu li a .glyphicon-user {
+  color: #203864;
+}
+.dropdown-menu.presence-menu li a .glyphicon-user.presence-unavailable {
+  color: #d8dee2;
+}
+.switch-msg-candy {
+  color: #203864;
+}
+#ao-send-message-container .switch-msg-candy label {
+  border: 1px solid #203864;
+}
+.switch-msg-candy.switch-msg-candy-yellow a {
+  background-color: #203864;
+}
+#ao-send-message-container .ao-editor-controls-container button {
+  background-color: #203864;
+}
+.k-tool-icon.k-state-selected,
+.k-state-selected:link {
+  background-color: #203864;
+}
+.k-button-group .k-tool-icon {
+  border-color: #203864;
+}
+#ao-upload-file .upload-button.hover {
+  background-color: #203864;
+}
+#ao-upload-file .send-button.active {
+  background-color: #203864;
+}
+.upload-progress .upload-bar {
+  background-color: #203864;
+}
+.ao-toggle-btn-large {
+  color: #203864;
+}
+.ao-send-text-chat-wrap button {
+  background-color: #203864;
+}
+@keyframes aoNavEnabledBtnHover {
+  0% {
+    background: white;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+@-webkit-keyframes aoNavEnabledBtnHover {
+  0% {
+    background: white;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+@keyframes aoLargeNavEnabledBtnHover {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+@-webkit-keyframes aoLargeNavEnabledBtnHover {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+@keyframes aoNavEnabledBtnIconHover {
+  0% {
+    color: #203864;
+    border-color: #203864;
+  }
+  100% {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+@-webkit-keyframes aoNavEnabledBtnIconHover {
+  0% {
+    color: #203864;
+    border-color: #203864;
+  }
+  100% {
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+@keyframes aoNavEnabledBtnTextHover {
+  0% {
+    color: #203864;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@-webkit-keyframes aoNavEnabledBtnTextHover {
+  0% {
+    color: #203864;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+@keyframes aoNavHighlightedBtnHover {
+  0% {
+    background: #203864;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+@-webkit-keyframes aoNavHighlightedBtnHover {
+  0% {
+    background: #203864;
+  }
+  100% {
+    background: #2b4c84;
+  }
+}
+.ao-login {
+  border-color: #203864;
+}
+.ao-login-btn {
+  background-color: #203864;
+  border-color: #203864;
+}
+.ao-widget-action:hover {
+  background-color: #2b4c84;
+}
+.ao-widget-action:active {
+  background-color: #949494;
+  color: #ffffff;
+  font-weight: bolder;
+}
+#vslider .ui-slider-range {
+  background: #203864;
+}
+#logo-alpha {
+  opacity: 0.04;
+}
+@media only screen and (min-width: 600px) and (orientation: portrait),only screen and (min-width: 641px) and (orientation: landscape),only screen and (min-device-width: 602px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332),only screen and (min-device-width: 602px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) and (device-aspect-ratio: 1.73913043478) {
+  .ao-left .ao-nav-btn.ao-customer-color-nav-button-highlight {
+    background-color: #203864;
+  }
+  .ao-mav-btn-text.ao-customer-color,
+  .ao-nav-btn-glyph.ao-customer-color {
+    color: #203864;
+  }
+  .ao-right .ao-nav-btn-enabled .ao-mav-btn-text.ao-customer-color,
+  .ao-right .ao-nav-btn-enabled .ao-nav-btn-glyph.ao-customer-color {
+    color: #203864;
+  }
+  .ao-customer-color-nav-button-highlight {
+    background-color: #203864;
+  }
+  .ao-text-color-white {
+    color: #ffffff;
+  }
+  .ao-toggle-btn-pause .ao-toggle-btn.ao-customer-border-color,
+  #ao-toggle-btn-add.ao-customer-border-color {
+    border-right-color: #203864;
+    border-color: #203864;
+  }
+}

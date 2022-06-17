@@ -1,0 +1,82 @@
+FONTS = [
+	{"name":"Refresh", 			"library":"fa",	"font":"fa-refresh",			"content": "\\f021",	"size":"fa-lg",  	"location":["Header"]},
+	{"name":"Circle Question", 	"library":"fa",	"font":"fa-question-circle",	"content": "\\f059",	"size":"fa-lg",  	"location":["Header"]},
+	{"name":"Settings", 		"library":"fa",	"font":"fa-gear",				"content": "\\f013",	"size":"fa-lg",  	"location":["Header"]},
+	{"name":"Chevron Down", 	"library":"fa",	"font":"fa-chevron-down",		"content": "\\f078",	"size":"fa-lg",  	"location":["Header"]},
+
+	{"name":"User", 			"library":"fa",	"font":"fa-user",				"content": "\\f0f0",	"size":"fa-lg", 	"location":["Tools Dropdown (Accounts)", 
+																																		"Side Navigation (Colleagues)",
+																																		"Dashboard (AccMan:UM Default)"]},
+	{"name":"Theme", 			"library":"sp",	"font":"icon-theme-new",		"content": "\\E7",		"size":"icon-lg", 	"location":["Tools Dropdown"]},
+	{"name":"Vendor", 			"library":"sp",	"font":"icon-vendor-new",		"content": "\\F2",		"size":"icon-lg", 	"location":["Tools Dropdown"]},
+	{"name":"Address Book", 	"library":"fa",	"font":"fa-address-book",		"content": "\\f2b9",	"size":"fa-lg",  	"location":["Tools Dropdown"]},
+
+	{"name":"Filter", 			"library":"fa",	"font":"fa-filter",				"content": "\\f0b0",	"size":"fa-lg",  	"location":["Dashboard Navigation"]},
+	{"name":"Chevron Left", 	"library":"fa",	"font":"fa-chevron-left",		"content": "\\f053",	"size":"fa-lg",  	"location":["Dashboard Navigation"]},
+	{"name":"Chevron Right", 	"library":"fa",	"font":"fa-chevron-right",		"content": "\\f054",	"size":"fa-lg",  	"location":["Dashboard Navigation"]},
+	{"name":"Search", 			"library":"fa",	"font":"fa-search",				"content": "\\f002",	"size":"fa-lg",  	"location":["Dashboard Navigation"]},
+
+
+	{"name":"All Recent", 		"library":"fa",	"font":"fa-clock-o",			"content": "\\f017",	"size":"fa-lg",  	"location":["Side Navigation"]},
+	{"name":"Clients", 			"library":"fa",	"font":"fa-user-md",			"content": "\\f0f0",	"size":"fa-lg",  	"location":["Side Navigation"]},
+	{"name":"Teams", 			"library":"sp",	"font":"icon-users",			"content": "\\44",		"size":"icon-2x",  	"location":["Side Navigation",
+																																		"Dashboard (AccMan:RM Default)",
+																																		"Dashboard (AccMan:RM:RE)"]},
+	{"name":"My Area", 			"library":"sp",	"font":"icon-home",				"content": "\\ef",		"size":"icon-lg",  	"location":["Side Navigation"]},
+	{"name":"User Plus", 		"library":"sp",	"font":"icon-user-plus",		"content": "\\74",		"size":"icon-lg",  	"location":["Side Navigation", 
+																																		"Side Nav Sub",
+																																		"Dashboard (AccMan:UM:UC)",
+																																		"Dashboard (AccMan:UM:DU)",
+																																		"Dashboard (AccMan:RM:UR)",
+																																		"Dashboard (AccMan:RM:UA)"]},
+
+	{"name":"User Offline", 	"library":"fa",	"font":"fa-circle-o",			"content": "\\f10c",	"size":"fa-lg",  	"location":["Side Nav Sub"]},
+	{"name":"User Online", 		"library":"fa",	"font":"fa-circle",				"content": "\\f111",	"size":"fa-lg",  	"location":["Side Nav Sub"]},
+	{"name":"Favourite", 		"library":"fa",	"font":"fa-star",				"content": "\\f005",	"size":"fa-lg",  	"location":["Side Nav Sub"]},
+	{"name":"Not Favourite", 	"library":"fa",	"font":"fa-star-o",				"content": "\\f006",	"size":"fa-lg",  	"location":["Side Nav Sub"]},
+
+	{"name":"Delete User", 		"library":"sp",	"font":"icon-sp-user-delete",	"content": "\\75",		"size":"icon-lg",  	"location":["Relationship Header",
+																																		"Dashboard (AccMan:UM:UD)",	
+																																		"Dashboard (AccMan:RM:UD)"]},
+	{"name":"Info", 			"library":"fa",	"font":"fa-info-circle",		"content": "\\f05a",	"size":"fa-lg",  	"location":["Relationship Header"]},
+
+	{"name":"List", 			"library":"sp",	"font":"icon-list-ul",			"content": "\\3f",		"size":"icon-lg",  	"location":["Relationship Header"]},
+	{"name":"Email", 			"library":"sp",	"font":"icon-envelope-o",		"content": "\\41",		"size":"icon-lg",  	"location":["Relationship Header"]},
+	{"name":"Chat", 			"library":"sp",	"font":"icon-commenting-o",		"content": "\\68",		"size":"icon-lg",  	"location":["Relationship Header", 
+																																		"Dashboard (type:textChat)"]},
+	{"name":"Call", 			"library":"sp",	"font":"icon-video-camera",		"content": "\\23",		"size":"icon-lg",  	"location":["Relationship Header"]},
+	{"name":"Record Msg", 		"library":"fa",	"font":"fa-microphone",			"content": "\\f131",	"size":"fa-lg",  	"location":["Relationship Header"]},
+	{"name":"Schedule", 		"library":"sp",	"font":"icon-calendar",			"content": "\\76",		"size":"icon-lg",  	"location":["Relationship Header"]},
+	{"name":"Vault", 			"library":"fa",	"font":"fa-university",			"content": "\\f19c",	"size":"icon-lg",  	"location":["Relationship Header", 
+																																		"Dashboard (Access:E FC:FolderChange)",
+																																		"Dashboard (Access:C T:FileTransfer)"]},
+
+	{"name":"Flag", 			"library":"sp",	"font":"icon-sp-flag",			"content": "\\6c",		"size":"icon-lg",  	"location":["Dashboard"]},
+	{"name":"Note Empty", 		"library":"ii",	"font":"ion-android-clipboard",	"content": "\\f376",	"size":"fa-lg",  	"location":["Dashboard"]},
+	{"name":"Note Text", 		"library":"ii",	"font":"ion-clipboard",			"content": "\\f127",	"size":"fa-lg",  	"location":["Dashboard"]},
+
+	{"name":"File", 			"library":"ii",	"font":"ion-document",			"content": "\\f12f",	"size":"fa-lg",  	"location":["Dashboard (Access:E FR:FileRep)"]},
+	{"name":"Edit", 			"library":"ii",	"font":"ion-edit",				"content": "\\f2bf",	"size":"fa-lg",  	"location":["Dashboard (Access:E NC:Rename)", 
+																																		"Dashboard (Access:E ND:DescChange)"]},
+	{"name":"Upload", 			"library":"ii",	"font":"ion-ios-cloud-upload-outline", "content": "\\f176",	"size":"fa-lg", "location":["Dashboard (Access:C U:FileUpload)"]},	
+	{"name":"Folder", 			"library":"fa",	"font":"fa-folder-o",			"content": "\\f07c",	"size":"fa-lg",  	"location":["Dashboard (Access:C F:NewFolder)"]},
+	{"name":"Copy", 			"library":"ii",	"font":"ion-ios-copy-outline", 	"content": "\\f41b",	"size":"fa-lg",  	"location":["Dashboard (Access:C C:FileCopy)"]},
+	{"name":"Undo\\Reload", 	"library":"ii",	"font":"ion-ios-reload",		"content": "\\f490",	"size":"fa-lg",  	"location":["Dashboard (Access:U D:DelUndo)"]},
+	{"name":"Download", 		"library":"ii",	"font":"ion-ios-cloud-download-outline", "content": "\\f407", "size":"fa-lg", "location":["Dashboard (FileAccess:R)"]},	
+	{"name":"Trash", 			"library":"ii",	"font":"ion-ios-trash-outline", "content": "\\f4c4", 	"size":"fa-lg", 	"location":["Dashboard (FileAccess:D)"]},
+
+	{"name":"Sent Email", 		"library":"ii",	"font":"ion-paper-airplane", 	"content": "\\f2c3", 	"size":"fa-lg", 	"location":["Dashboard (MsgType:T)"]},
+	{"name":"Email", 			"library":"ii",	"font":"ion-ios-email-outline", "content": "\\f422", 	"size":"fa-lg", 	"location":["Dashboard (MsgType:E)"]},
+
+	{"name":"Phone", 			"library":"ii",	"font":"ion-ios-telephone-outline", "content": "\\f4b8", "size":"fa-lg", 	"location":["Dashboard (All call types)"]},
+
+	{"name":"User Edit", 		"library":"sp",	"font":"icon-sp-user-edit", 	"content": "\\70", 		"size":"icon-lg", 	"location":["Dashboard (AccMan:UM:UE)",
+																																		"Dashboard (AccMan:UM:PE)",
+																																		"Dashboard (AccMan:UM:ME)"]},
+	{"name":"Group Add", 		"library":"sp",	"font":"icon-sp-group-add", 	"content": "\\72", 		"size":"icon-lg", 	"location":["Dashboard (AccMan:RM:RC)",	
+																																		"Dashboard (AccMan:RM:DU)",
+																																		"Dashboard (AccMan:RM:RA)"]},
+	{"name":"Group Delete", 	"library":"sp",	"font":"icon-sp-group-delete", 	"content": "\\71", 		"size":"icon-lg", 	"location":["Dashboard (AccMan:RM:RD)",
+																																		"Dashboard (AccMan:RM:RI)"]}
+
+]

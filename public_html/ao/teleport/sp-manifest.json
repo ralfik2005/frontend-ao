@@ -1,0 +1,30 @@
+{
+  "name": "Secure Portal",
+  "short_name": "Secure Portal",
+  "description": "Launch the application from your home screen.",
+  "icons": [{
+    "src": "teleport/launcher/sp/ic_launcherx50.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "teleport/launcher/sp/ic_launcherx72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "teleport/launcher/sp/ic_launcherx100.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "teleport/launcher/sp/ic_launcherx144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
+  "prefer_related_applications": true,
+  "related_applications": [{
+    "platform": "play",
+    "id": "com.alwaysorg.ao"
+  }]
+  //,
+  //"start_url": ".",
+  //"display": "fullscreen"
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 ao-logged-out"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 ao-logged-out"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 ao-logged-out"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js ao-logged-out"> <!--<![endif]-->
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">        
+        <title>Secure Portal - Log In</title>
+        <meta name="description" content="">
+        <!--meta name="viewport" content="width=device-width"-->
+
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+        <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="portallogin/css/bootstrap-theme.min.css">        
+        <link rel="stylesheet" href="portallogin/css/jquery-ui.css">          
+        
+        <link rel="stylesheet" href="portallogin/css/style.css">
+
+        <!--META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="Expires" CONTENT="-1"-->
+    </head>
+    <body>
+      
+        <script src="portallogin/js/lib/jquery.js"></script>
+        <script src="portallogin/js/lib/bootstrap.min.js"></script> 
+        <script src="portallogin/js/portallogin.js"></script> 
+
+        <div id="preview-android-toast" class="preview-android-toast" style="position:absolute; bottom:10%; width:100%; display:none">
+            <div style="background-color:white; width:40%; margin-left: auto; margin-right: auto; height:auto; padding:0.35em 0.3em 0 0.3em; text-align:center; border-radius:5px; border:1px solid; box-shadow: 1x 1px 1px #888888; border-color:#1d1d1d">
+                <p id="preview-android-toast-text" style="font-size:1.4em">Loading...</p>
+            </div>
+        </div>                        
+
+        <form name="loginForm" id="loginForm">
+            <div class="titleForm">
+                Private Communications Area
+            </div>
+            <div class="labelLine">
+                <div class="labelField">User name:</div>
+                <input type="text" class="inputField" id="usernameField"></div>
+            </div>
+            <div class="labelLine">
+                <div class="labelField">Password:</div>
+                <input type="password" class="inputField" id="passwordField"></div>
+            </div>
+                <input type="hidden" id="companyIdent" value="aoteam">
+            <div class="buttonLine">
+                 <div id="errorMessage" style="display:none;">
+                    Incorrect user name/password
+                 </div>
+                 <input type="submit" class="buttonForm" name="LogIn" value="Log In">
+            </div>
+
+        </div>
+
+
+<!-- Remove once stack modal is ready -->
+        <div class="modal fade in" id="defaultModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="defaultModalXClose">&times;</button>
+                <h4 class="modal-title" id="defaultModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body" id="defaultModalBody">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="defaultModalClose">Close</button>
+                <button type="button" class="btn btn-primary" id="defaultModalOk">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+<!-- Remove once stack modal is ready -->
+
+    </body>
+</html>

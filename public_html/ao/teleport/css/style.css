@@ -1,0 +1,523 @@
+@font-face
+{
+    font-family: HelveticaNeueLight;
+    src: url('../fonts/HelveticaNeueLight.ttf')
+}
+
+@font-face
+{
+    font-family: HelveticaNeue;
+    src: url('../fonts/HelveticaNeue.ttf');
+}
+
+@font-face
+{
+    font-family: HelveticaNeueGecko;
+    src: url('../fonts/HelveticaNeue.woff');
+}
+  
+
+@font-face
+{                
+    font-family: HelveticaNeueBold;
+    src: url('../fonts/HelveticaNeueBold.ttf')
+}
+
+.ao-nav {
+    background-color: white;
+    border-color: transparent;    
+    position:absolute;
+    background-color:transparent;   
+    margin-top: 10px;
+    margin-left: 20px;     
+}
+
+.navbar-brand {
+    max-width: 200px;
+    max-height: 40px;
+    padding: 0px;
+    height: 20px;
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition: visibility 0s, opacity 2s ease-in;
+       -moz-transition: visibility 0s, opacity 2s ease-in;
+        -ms-transition: visibility 0s, opacity 2s ease-in;
+         -o-transition: visibility 0s, opacity 2s ease-in;
+            transition: visibility 0s, opacity 2s ease-in;    
+}
+
+.ao-section-app {
+    background: #535353;
+
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition: visibility 0s, opacity 1.25s ease-in;
+       -moz-transition: visibility 0s, opacity 1.25s ease-in;
+        -ms-transition: visibility 0s, opacity 1.25s ease-in;
+         -o-transition: visibility 0s, opacity 1.25s ease-in;
+            transition: visibility 0s, opacity 1.25s ease-in;      
+}
+
+.ao-app {
+    position: relative;
+    overflow: hidden;
+
+    height: 280px;
+    height: 100vh;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/background/cf-background.png);
+
+    background-color: white;
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 100%;
+}
+
+.ao-app.cf {
+    background-image: url(../img/background/cf-background.png);
+}
+
+.ao-app.sp {
+    background-image: url(../img/background/sp-background.jpg);
+}
+
+.ao-app.su {
+    background-image: url(../img/background/su-background.png);
+}
+
+.ao-app-promo {
+    position: absolute;
+    text-align: right;
+    color: #333333;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1;
+    padding-right: 20px;
+}
+
+.ao-app-device-img {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    height: 250px;
+    width: 250px;
+    margin-left: -125px;
+    background: url(../img/ios/cf_ios_mobile.png) center/100% 100% no-repeat;
+}
+
+.ao-app.android .ao-app-device-img {
+    height: 500px;
+    top: 100px;
+    bottom: initial;
+}
+
+.ao-app.ios.cf .ao-app-device-img {
+    background-image: url(../img/ios/cf_ios_mobile.png);
+}
+
+.ao-app.ios.sp .ao-app-device-img {
+    background-image: url(../img/ios/sp_ios_mobile.png);
+}
+
+.ao-app.ios.su .ao-app-device-img {
+    background-image: url(../img/ios/su_ios_mobile.png);
+}
+
+.ao-app.android.cf .ao-app-device-img {
+    background-image: url(../img/android/cf_android_mobile.png);
+}
+
+.ao-app.android.sp .ao-app-device-img {
+    background-image: url(../img/android/sp_android_mobile.png);
+}
+
+.ao-app.android.su .ao-app-device-img {
+    background-image: url(../img/android/su_android_mobile.png);
+}
+
+.ao-app-promo-title {
+    font-family: 'HelveticaNeueBold', 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    // color: #fff;
+    // text-shadow: 0 2px 2px rgba(0, 0, 0, .08);
+    padding-top: 7px    
+}
+
+.ao-app-promo-desc {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'HelveticaNeueLight', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    // color: #fff;
+    // text-shadow: 0 1px 0 rgba(0, 0, 0, .08);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1001;
+}
+
+.container {
+    font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    display:none;
+}
+
+.ao-instructions-container {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    max-width: 100%;
+    left: 0%;
+    margin-top: 50px;
+}
+
+@media (max-height: 450px) {
+    .ao-instructions-container {
+        margin-top: 20px; 
+    }
+}
+
+@media (max-height: 350px) {
+    .ao-instructions-container {
+        margin-top: 0px; 
+    }
+}
+
+.ao-anchor-link {
+    font-family: 'HelveticaNeueBold', 'Helvetica Neue Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 0px;   
+    vertical-align: inherit; 
+}
+
+.ao-app-box-container {
+    margin: auto;
+    width: 400px;
+}
+
+.ao-app-box {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    margin: 30px;
+    float: left;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.25em;
+}
+
+@media (max-width: 450px) {
+
+    .ao-app-box-container {
+        width: 360px;
+    }
+
+    .ao-app-box {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .ao-app-box-container {
+        width: 320px;
+    }
+
+    .ao-app-box {
+        margin: 10px;
+    }
+}
+
+
+.ao-app-image {
+    margin: 6px 0 8px 0;
+}
+
+.ao-to-site {
+    font-family: 'HelveticaNeueLight', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 10px;   
+}
+
+.ao-browser-instructions {
+    display: none;
+}
+
+.ao-native-instructions {
+    display: none;
+}
+
+.ao-instructions-heading {
+    color: #ffffff;
+    font-size: 24px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+    line-height: 1.25em;
+}
+
+@media (max-height: 400px) {
+    .ao-instructions-heading {
+        padding-bottom: 0px; 
+    }
+}
+
+#ao-browser-instructions {
+    display: none;    
+}
+
+.fadeInLoad {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media (min-width: 760px) {
+    .ao-app {
+        height: 480px;
+        height: 100vh;
+    }
+
+    .ao-app-device-img {
+        bottom: 0;
+        height: 350px;
+        width: 700px;
+        margin-left: -350px;
+        background-image: url(../img/ios/cf_ios_tablet.png);
+    }
+
+    .ao-app.android .ao-app-device-img {
+        height: 350px;
+        top: initial;
+        bottom: 0;
+    }
+
+    .ao-app.ios.cf .ao-app-device-img {
+        background-image: url(../img/ios/cf_ios_tablet.png);
+    }
+
+    .ao-app.ios.sp .ao-app-device-img {
+        background-image: url(../img/ios/sp_ios_tablet.png);
+    }
+
+    .ao-app.ios.su .ao-app-device-img {
+        background-image: url(../img/ios/su_ios_tablet.png);
+    }
+
+    .ao-app.android.cf .ao-app-device-img {
+        background-image: url(../img/android/cf_android_tablet.png);
+    }
+
+    .ao-app.android.sp .ao-app-device-img {
+        background-image: url(../img/android/sp_android_tablet.png);
+    }
+
+    .ao-app.android.su .ao-app-device-img {
+        background-image: url(../img/android/su_android_tablet.png);
+    }
+
+    .ao-app-promo-title {
+        font-size: 25px;
+    }
+
+    .ao-app-promo-desc {
+        font-size: 18px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;        
+    }
+
+    .navbar-brand {
+        max-width: 1600px;
+        max-height: 20px;    
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 1300px) and (orientation: portrait) {
+    .ao-app {
+        height: 780px;    
+        height: 100vh;
+    }
+    .ao-app-promo-title {
+        font-size: 28px;
+    }
+    .ao-app-promo-desc {
+        font-size: 21px;
+    }    
+    .btn {
+        font-size: 20px;
+    }   
+    p {
+        font-size: 20px;        
+    }
+    .navbar-brand {
+        max-width: 180px;
+        max-height: 90px;    
+    }    
+}
+
+
+#loaderFS-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loaderFS {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #bbbbbb;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+    #loaderFS:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #cccccc;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loaderFS:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #dddddd;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loaderFS-wrapper .loaderFS-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: white; //#222222;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loaderFS-wrapper .loaderFS-section.section-left {
+        left: 0;
+    }
+
+    #loaderFS-wrapper .loaderFS-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loaderFS-wrapper .loaderFS-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loaderFS-wrapper .loaderFS-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loaderFS {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loaderFS-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+    
+    /* JavaScript Turned Off */
+    .no-js #loaderFS-wrapper {
+        display: block;
+    }
+    .no-js h1 {
+        color: #222222;
+    }
+
+    #content {
+        margin: 0 auto;
+        padding-bottom: 50px;
+        width: 80%;
+        max-width: 978px;
+    }  
