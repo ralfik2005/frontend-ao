@@ -43,7 +43,7 @@ if ($domain == "secured-comm") {
     define("DEFAULT_CIDENT", "AAA");
     $pwd = '$fe_server1';
 } else if ($domain == "stayprivatetest") {
-    define("AO_BASE_URL", "https://api.stayprivatetest.com/ao_ws/api/");
+    define("AO_BASE_URL", "/ao_ws/api/");
     define("DEFAULT_CIDENT", "AAA");
     $pwd = '$fe_server1';
 } else {
